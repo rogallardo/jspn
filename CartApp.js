@@ -47,6 +47,17 @@ function datosCarrito(){
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //----------------------------------------------------BOTONES CARRITO----------------------------------------------------------------------------------//
 
+    const btnCarrito = document.getElementById("btn-carrito")
+    btnCarrito.addEventListener("click", function aC (){const carritoContainer = document.getElementById("carrito-container")
+    carritoContainer.className=("carrito-container-on")})
+
+    const btnCerrarCarrito = document.getElementById("btnclose")
+    btnCerrarCarrito.addEventListener("click", function (){ const carritoContainer =document.getElementById("carrito-container")
+        carritoContainer.className=("carrito-container")
+    })
+
+
+
 function eliminar(idProducto){
     const productoAEliminar = carrito.find(el=> el.id === idProducto)
     let pos = carrito.indexOf(productoAEliminar)             
