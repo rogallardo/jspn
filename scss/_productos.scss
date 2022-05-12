@@ -1,0 +1,630 @@
+.grid-container-productos {
+    background-color: rgb(236, 236, 236);
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto);
+    grid-template-areas:
+        'header			header   	header'
+        'categorias-productos-container	categorias-productos-container  categorias-productos-container'
+        'footer	 		footer 		footer';
+   .categorias-productos-container {
+        margin-top: 50px;
+        grid-area: categorias-productos-container;
+        .categorias-container {
+            min-height: 100vh;
+            min-width: 100vw;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 5%;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, auto);
+            grid-template-areas: 'cat-MTB cat-repuestos cat-accesorios cat-indumentaria';
+            .item-cat {
+                height: 600px;
+                width: 300px;
+                box-shadow: 5px 0px 10px rgb(155, 155, 155);
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                transition: 0.1s;
+                backdrop-filter: brightness(40%);
+                background-size: cover;
+                &:hover {
+                    transform: scale(1.02)
+                }
+                .bright {
+                    backdrop-filter: brightness(40%);
+                    height: 100%;
+                    width: 100%;
+                }  
+                .item-cat-titulo {
+                    font-size: 30px;
+                    text-decoration: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    height: 100%;
+                    width: 100%;
+                    color: white;
+                }
+            }     
+            .cat-MTB {
+                grid-area: cat-MTB;
+                background-image: url(../img/catMTB.jpg);
+                backdrop-filter: brightness(40%);
+            }
+            .cat-repuestos {
+                grid-area: cat-repuestos;
+                background-image: url(../img/catREP.jpg);
+            }
+            .cat-accesorios {
+                grid-area: cat-accesorios;
+                background-image: url(../img/catACC.jpg);
+            }
+            .cat-indumentaria {
+                grid-area: cat-indumentaria;
+                background-image: url(../img/catIND.jpg);
+            }
+        }
+        .titulo-cat-container {
+            width: 100vw;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            .titulo-cat {
+                height: 100px;
+                width: 1090px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                text-align: center;
+                font-size: 35px;
+                background-color: rgb(39, 39, 39);
+
+            }
+        }
+        .productos-container {
+            color: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 100vw;
+            grid-template-rows: auto;
+            font-size: 18px;
+            height: fit-content;
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            justify-content: center;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 2%;
+            .item-prod-container{
+                width: fit-content;
+                .item-prod {
+                    height: fit-content;
+                    width: 350px;
+                    font-size: 60px;
+                    text-decoration: none;
+                    box-shadow: 5px 0px 10px rgb(155, 155, 155); 
+                    display: flex;
+                    flex-direction: column;
+                    transition: 0.5s;
+                    &:hover {
+                        background-color: rgb(255, 255, 255);
+                        text-decoration: none;
+                        border: solid 1px rgb(108, 175, 153);
+                        color: rgb(108, 175, 153);
+                        box-shadow: 10px 10px 15px rgb(108, 175, 153);               
+                    }
+                    .item-img-container {
+                        height: 60%;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 3%;
+                        .item-img{
+                            height: 100%;
+                            width: 100%;
+                            background-size: cover;
+                            display: flex;                      
+                        }
+                    }
+                    .item-desc-container {
+                        height: 40%;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        h4 {
+                            font-size: 18px;
+                            font-weight: lighter;
+                            color: black;
+                            text-align: center;
+                            height: fit-content;
+                        }
+                        h5 {
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-size: 16px;
+                            color: black;
+                            text-align: center;
+                            height: fit-content;
+                        }
+                        h6 {
+                            font-size: 18px;
+                            color: rgb(0, 0, 0);
+                            text-align: center;
+                        }
+                        .btn-prod {
+                            height: 40px;
+                            font-size: 20px;
+                            font-family: 'Oswald', sans-serif;
+                            color: white;
+                            border: solid 1px rgb(104, 104, 104);
+                            background-color: rgb(104, 104, 104);
+                            transition: 0.5s;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-decoration: none;
+                            margin-bottom: 5px;
+                            &:hover {
+                                background-color: rgb(255, 255, 255);
+                                text-decoration: none;
+                                border: solid 1px black;
+                                color: rgb(0, 0, 0);
+                                cursor:pointer;
+                            }
+                        }
+                        .btn-prod2 {
+                            height: 40px;
+                            font-size: 20px;
+                            font-family: 'Oswald', sans-serif;
+                            color: rgb(108, 176, 153);
+                            border-color: solid 1px black;
+                            background-color: rgb(255, 255, 255);
+                            transition: 0.5s;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-decoration: none;
+                            box-shadow: 5px 0px 10px rgb(155, 155, 155);
+                            &:hover {
+                                background-color: rgb(255, 255, 255);
+                                text-decoration: none;
+                                border: solid 1px black;
+                                color: rgb(0, 0, 0);
+                                cursor:pointer;
+                                box-shadow:none;
+                            }
+                        }
+                        .btn-prod3 {
+                            height: 40px;
+                            font-size: 20px;
+                            font-family: 'Oswald', sans-serif;
+                            color: rgb(104, 104, 104);
+                            border-color: solid 1px black;
+                            background-color: rgb(255, 255, 255);
+                            transition: 0.5s;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-decoration: none;
+                            &:hover {
+                                text-decoration: none;
+                                color: rgb(104, 104, 104);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }     
+}
+
+.carrito-section{
+    z-index: 1000;
+    width: 100vw;
+    // height: 100vh;
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    margin-top:20px;
+    
+    .carrito-container{
+        width: fit-content;
+        height: 1vh;
+        position: fixed;
+        // padding-top: 90px;
+        // padding-bottom: 100px;
+        background-color: rgb(226, 226, 226);
+        transition: 1s;
+        transform: translateX(400px);
+    }
+    .carrito-container-on{
+        width: fit-content;
+        height: 100vh;
+        position: fixed;
+        padding-top: 90px;
+        padding-bottom: 100px;
+        background-color: rgb(226, 226, 226);
+        transition: 1s;
+        transform: translateX(0px);     
+    }
+    
+    .titulo-btnclose-carrito-container{
+        display:flex;
+        height: fit-content;
+        width: 400px;
+        justify-content: space-between;
+        align-items: center;
+        padding-left:30px;
+        padding-right:30px;
+        
+            .titulo-carrito{
+                width: fit-content;
+                height: 25px;
+                display: flex;
+                font-size: 25px;
+            }
+             .btnclose{
+                width: 25px;
+                height: 25px;
+                background-image: url(/img/close.png);
+                background-size: cover;
+                display: flex;
+                cursor: pointer;
+            }                
+        }  
+        .carrito-body{
+            height: 100%;  
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: scroll;
+            .item-prod-carrito {
+                min-height: 450px;
+                width: 300px;
+                text-decoration: none;
+                box-shadow: 5px 0px 10px rgb(155, 155, 155);
+                display: flex;
+                flex-direction: column;
+                margin-top: 3%;
+                .item-img-container-carrito {
+                    height: 60%;
+                    width: 100%;
+                    display: flex;
+                    padding: 3%;
+                    .item-img-carrito{
+                        height: 100%;
+                        width: 100%;
+                        background-size: cover;
+                    }
+                }
+                .item-desc-container-carrito {
+                    height: 40%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 3%;
+                    .btn-elim {
+                        height: 40px;
+                        font-size: 20px;
+                        font-family: 'Oswald', sans-serif;
+                        color: white;
+                        border: solid 1px rgb(104, 104, 104);
+                        background-color: rgb(104, 104, 104);
+                        transition: 0.5s;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-decoration: none;
+                        margin-bottom: 5px;
+                    
+                    
+                        &:hover {
+                            background-color: rgb(255, 255, 255);
+                            text-decoration: none;
+                            border: solid 1px black;
+                            color: rgb(0, 0, 0);
+                            cursor:pointer;
+                        }
+                    
+                    }
+                    h4 {
+                        font-size: 18px;
+                        font-weight: lighter;
+                        color: black;
+                        text-align: center;
+                        height: fit-content;
+                    }
+                    h5 {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 16px;
+                        color: black;
+                        text-align: center;
+                        height: fit-content;
+                    }
+                    h6 {
+                        font-size: 18px;
+                        color: rgb(0, 0, 0);
+                        text-align: center;
+                    }
+                    .cantidad-container{
+                        height: 40px;
+                        font-size: 20px;
+                        font-family: 'Oswald', sans-serif;
+                        color: rgb(0, 0, 0);
+                        border-color: solid 1px black;
+                        background-color: rgb(255, 255, 255);
+                        transition: 0.5s;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-decoration: none;
+                        .cant {
+                            height: 40px;
+                            width: 40px;
+                            font-size: 20px;
+                            font-family: 'Oswald', sans-serif;
+                            color: rgb(0, 0, 0);
+                            border-color: solid 1px black;
+                            background-color: rgb(255, 255, 255);
+                            transition: 0.5s;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-decoration: none;
+                            &:hover {
+                                background-color: rgb(255, 255, 255);
+                                text-decoration: none;
+                                color: rgb(0, 0, 0);
+                            } 
+                        }
+                        .btn-cant1 {
+                            height: 40px;
+                            width: 40px;
+                            font-size: 20px;
+                            color: rgb(0, 0, 0);
+                            background-color: rgb(255, 255, 255);
+                            border: solid 1px rgb(255, 255, 255);
+                            transition: 0.9s;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-decoration: none;
+                            &:hover {
+                                background-color: rgb(255, 255, 255);
+                                text-decoration: none;
+                                border: solid 1px black;
+                                color: rgb(108, 175, 153);
+                                cursor: pointer;
+                                transform: translateX(-1px);
+                            }      
+                        }
+                        .btn-cant2 {
+                            height: 40px;
+                            width: 40px;
+                            font-size: 20px;
+                            color: rgb(0, 0, 0);
+                            background-color: rgb(255, 255, 255);
+                            border: solid 1px rgb(255, 255, 255);
+                            transition: 0.9s;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-decoration: none;          
+                            &:hover {
+                                background-color: rgb(255, 255, 255);
+                                text-decoration: none;
+                                border: solid 1px black;
+                                color: rgb(108, 175, 153);
+                                cursor: pointer;
+                                transform: translateX(1px);
+                            }
+                        
+                        }
+                    }
+                }
+            }
+        }    
+            
+        
+        
+    
+}
+// ***********************************************************************************************************************************//
+/* +++++++++++++++++++++++++++++++++++++++++   RESPONSIVE:  200-760px ++++++++++++++++++++++++++++++ */
+@media only screen and (min-width: 200px) and (max-width: 760px) {
+    #productos-container {
+
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr ;
+        width: 100vw;
+        grid-template-rows: auto;
+        font-size: 18px;
+        height: fit-content;
+        gap: 20px;
+        margin-bottom: 20px;
+        justify-content: center;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 2%;
+    }
+
+    .categorias-container {
+        height: 85vh;
+        overflow: hidden;
+        max-width: 100vw;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding: 3%;
+        margin-top: 30px;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            'cat-MTB cat-repuestos'
+            'cat-accesorios cat-indumentaria';
+
+        .item-cat {
+            height: 100%;
+            width: 100%;
+            box-shadow: 5px 0px 10px rgb(155, 155, 155);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            transition: 0.2s;
+            backdrop-filter: brightness(40%);
+            background-size: cover;
+        
+
+            &:hover {
+                transform: scale(1.0);
+            }
+        }
+        .item-cat-titulo {
+            font-size: 22px;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+            color: white;
+        }
+
+    }
+    .item-prod {
+        height: fit-content;
+        width: 350px;
+        font-size: 60px;
+        text-decoration: none;
+        box-shadow: 5px 0px 10px rgb(155, 155, 155); 
+        display: flex;
+        flex-direction: column;
+        transition: 0.5s;
+        &:hover {
+            background-color: rgb(255, 255, 255);
+            text-decoration: none;
+            border: solid 1px rgb(108, 175, 153);
+            color: rgb(108, 175, 153);
+            box-shadow: 10px 10px 15px rgb(108, 175, 153);
+            // transform: translateX(-1px);
+        }
+    
+        .item-img-container {
+            height: 60%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 3%;
+    
+            .item-img{
+                height: 100%;
+                width: 100%;
+                background-size: cover;
+                display: flex;
+                
+            }
+    
+        }
+        
+    
+        .item-desc-container {
+            height: 40%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            // padding: 3%;
+    
+    
+            h4 {
+                font-size: 18px;
+                font-weight: lighter;
+                color: black;
+                text-align: center;
+                height: fit-content;
+            }
+    
+            h5 {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                color: black;
+                text-align: center;
+                height: fit-content;
+            }
+    
+            h6 {
+                font-size: 18px;
+                color: rgb(0, 0, 0);
+                text-align: center;
+            }
+    
+        }
+    
+    }
+    .space-intercat {
+        width: 100vw;
+        height: 70px;
+    
+    }
+}
+/* +++++++++++++++++++++++++++++++++++++++++   RESPONSIVE:  761-1023px ++++++++++++++++++++++++++++++ */
+@media only screen and (min-width: 761px) and (max-width: 1023px) {
+    #productos-container {
+
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100vw;
+        font-size: 18px;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2%;
+ 
+
+    }
+
+    .categorias-container {
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        padding-top: 80px;
+        align-items: center;
+        justify-items: center;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            'cat-MTB cat-repuestos'
+            'cat-accesorios cat-indumentaria';
+
+        .item-cat {
+            height: 100%;
+            width: 100%;
+            box-shadow: 5px 0px 10px rgb(155, 155, 155);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            transition: 0.2s;
+            backdrop-filter: brightness(40%);
+            background-size: cover;
+
+
+            &:hover {
+                transform: scale(1.0);
+            }
+        }
+    }
+}
