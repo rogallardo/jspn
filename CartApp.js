@@ -47,13 +47,6 @@ function datosCarrito(){
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //----------------------------------------------------BOTONES CARRITO----------------------------------------------------------------------------------//
 
-    let pepito = document.getElementById("prueba")
-    pepito.addEventListener("click", apretar())
-
-function apretar (){
-    console.log("hola")
-}
-
 function eliminar(idProducto){
     const productoAEliminar = carrito.find(el=> el.id === idProducto)
     let pos = carrito.indexOf(productoAEliminar)             
