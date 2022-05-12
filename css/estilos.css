@@ -1402,7 +1402,7 @@ a {
   position: fixed;
   background-color: #e2e2e2;
   transition: 1s;
-  transform: translateX(px);
+  transform: translateX(0px);
 }
 .carrito-section .carrito-container-on {
   width: fit-content;
