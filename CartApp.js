@@ -5,10 +5,6 @@ datosCarrito()
 const mostrarCardsCarrito = (card) => document.getElementById("carrito").innerHTML = card;
 generarCardsEnCarrito(carrito)
 function generarCardsEnCarrito(carrito){
-    fetch('https://api.bluelytics.com.ar/v2/latest')
-        .then((response) => response.json())
-        .then((data) => {
-            let dolarPrice = data.blue.value_sell;
     let acumuladorDeCards = ``
     carrito.forEach((bici) => {
         acumuladorDeCards +=`
@@ -21,7 +17,7 @@ function generarCardsEnCarrito(carrito){
                                 <a onclick="eliminar(${bici.id})" class="btn-elim" >Eliminar</a>
                                 <h4 class="card-title">${bici.modelo}</h4>
                                 <h5>${bici.equipamiento}</h5>
-                                <h6>ARS $${(bici.precio * dolarPrice)}</h6>
+                                <h6>ARS $${bici.precio}</h6>
                                 <div class="cantidad-container">
                                     <a onclick="dismCant(${bici.id})" id= "cantidad-${bici.id}" class="btn-cant1">-</a>
                                     <a  id="contadorCant${bici.id}" class="cant"> ${bici.cantidad} </a>
@@ -33,19 +29,15 @@ function generarCardsEnCarrito(carrito){
  }) 
     mostrarCardsCarrito(acumuladorDeCards)
 }
-)}
+
 function cantidadTotalCarrito (){  
     const totalProductos = carrito.reduce((acc, producto) => (acc + producto.cantidad), 0)
     document.getElementById('cantidad-carrito').innerHTML = totalProductos
 }
 function precioTotal(){
-    fetch('https://api.bluelytics.com.ar/v2/latest')
-    .then((response) => response.json())
-    .then((data) => {   
-        let dolarPrice = data.blue.value_sell;
+
     const precio = carrito.reduce((acc, biciEnCarrito) => ( acc + (biciEnCarrito.precio * biciEnCarrito.cantidad) ), 0)
-    document.getElementById("preciototal").innerHTML= precio * dolarPrice
-})
+    document.getElementById("preciototal").innerHTML= precio
 }
 function datosCarrito(){
     cantidadTotalCarrito()
