@@ -24,8 +24,8 @@ function generadorDeCards(bicis) {
 }};
 generadorDeCards(bicis);
 btnCardAgregado ()
-mostrarBarraBusqueda ()
-motorBusqueda ()
+BarraBusqueda ()
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //---------------------------------------------------BOTONES CARDS------------------------------------------------------------------------------------//
 function agregarAlCarrito(idProducto){
@@ -49,23 +49,29 @@ function btnCardAgregado () {
         }  
     })
 }
-function mostrarBarraBusqueda (){
+function BarraBusqueda (){
     const btnSearch = document.getElementById("btn-search")
     btnSearch.addEventListener("click", () => { 
     const barraDeBusqueda = document.getElementById("input-search-container")
     const barraDeBusquedaClase = barraDeBusqueda.classList
     barraDeBusquedaClase.toggle("input-search-container-on")
+    const tituloSection = document.getElementById("titulo-cat")
+    tituloSection.innerHTML=`PRODUCTOS`
+    generadorDeCards(bicis);
+    motorBusqueda ()
     })   
 }
 function motorBusqueda (){  
     const inputSearch = document.getElementById("input-search")
-    inputSearch.addEventListener("input", (e) => {
+    inputSearch.addEventListener("input",(e) => {
     const value = e.target.value  
     const result = bicis.filter(item => item.modelo.toLowerCase().includes(value) || item.equipamiento.toLowerCase().includes(value))
     const searchAction = document.getElementById("btn-search-act")
     searchAction.addEventListener("click", function mostrarResultado(){
     const productosContainer= document.getElementById('productos-container')
     productosContainer.innerHTML=``;
+    const tituloSection = document.getElementById("titulo-cat")
+    tituloSection.innerHTML=`RESULTADO`
     generadorDeCards(result)
     btnCardAgregado ()  
     })   
