@@ -239,12 +239,12 @@
     
     .carrito-container{
         width: fit-content;
-        height: 0.1vh;
+        height: 100vh;
         position: fixed;
         padding-top: 90px;
         padding-bottom: 100px;
         background-color: rgb(226, 226, 226);
-        transition: 1s;
+        transition: 0.5s;
         transform: translateX(400px);
     }
     .carrito-container-on{
@@ -254,7 +254,7 @@
         padding-top: 90px;
         padding-bottom: 100px;
         background-color: rgb(226, 226, 226);
-        transition: 1s;
+        transition: 0.5s;
         transform: translateX(0px);     
     }
     

@@ -33,11 +33,12 @@
                 <a href="galeria.html">GALERÍA</a>
                 <a href="nosotros.html">NOSOTROS</a>
                 <div class="search-carrito-container">
+                    <div id="btn-search" class="btn-search">
+                    </div>
                     <div id="btn-carrito" class="btn-carrito">
                         <p class="cantidad-carrito" id="cantidad-carrito">0</p>
                     </div>
                 </div>
-
 
             </nav>
 
@@ -76,6 +77,12 @@
             </div>
 
         </header>
+        <div id="input-search-container" class="input-search-container">
+                <input type="text" id="input-search"class="form-control input-search" placeholder="Buscar..." aria-label="Recipient's username" aria-describedby="button-addon2" >
+                <div id="btn-search-act" class="btn-search-act">
+                </div>
+       </div>
+        
         <section class="carrito-section">
             <div id="carrito-container" class="carrito-container">
                 <div class="titulo-btnclose-carrito-container">
@@ -98,7 +105,7 @@
             <div class="categorias-container">
                 <div class="item-cat cat-MTB">
                     <div class="bright">
-                        <a href="#MTB" class="item-cat-titulo">MOUNTAIN-BIKE</a>
+                        <a href="#titulo-cat-container" class="item-cat-titulo">MOUNTAIN-BIKE</a>
                     </div>
                 </div>
                 <div class="item-cat cat-repuestos">
@@ -118,8 +125,8 @@
                 </div>
             </div>
             <!-- *************************************** TITULO DE CATEGORIA *************************************************** -->
-            <div class="titulo-cat-container">
-                <h2 class="titulo-cat">MOUNTAIN-BIKE</h2>
+            <div id="titulo-cat-container"class="titulo-cat-container">
+                <h2 id="titulo-cat"class="titulo-cat">MOUNTAIN-BIKE</h2>
             </div>
             <!-- ***************************************CONTENEDOR DE CARDS PRODUCTOS******************************************* -->
             <section class="productos-container" id="productos-container">
@@ -183,6 +190,7 @@
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
 
     <script>
         AOS.init();

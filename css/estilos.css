@@ -96,20 +96,38 @@ a {
 
 .search-carrito-container {
   width: 100vw;
-  z-index: 900;
-  margin-right: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
   display: flex;
-  justify-content: right;
   position: absolute;
+  justify-content: space-between;
+}
+.search-carrito-container .btn-search {
+  min-width: 25px;
+  min-height: 25px;
+  max-height: 25px;
+  display: flex;
+  justify-content: center;
+  background-image: url(../img/searchicon.jpg);
+  background-size: cover;
+  transition: 0.5s;
+  margin-top: 0.5%;
+  z-index: 1800;
+}
+.search-carrito-container .btn-search:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 .search-carrito-container .btn-carrito {
-  width: 38px;
-  height: 38px;
+  min-width: 35px;
+  height: 35px;
   display: flex;
   justify-content: center;
   background-image: url(../img/carrito.png);
   background-size: cover;
   transition: 0.5s;
+  margin-top: 0.2%;
+  z-index: 1700;
 }
 .search-carrito-container .btn-carrito:hover {
   transform: scale(1.2);
@@ -144,6 +162,12 @@ a {
   animation-duration: 1s;
   justify-content: center;
   align-items: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 @keyframes effect {
   0% {
@@ -155,6 +179,55 @@ a {
   100% {
     transform: translateY(0px);
   }
+}
+
+.input-search-container {
+  width: 100vw;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: #fffffffa;
+  margin-top: 50px;
+  transition: 0.2s;
+}
+
+.input-search-container-on {
+  width: 100vw;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  position: fixed;
+  background-color: #ffffffd3;
+  transition: 0.2s;
+  margin-top: 100px;
+}
+
+.btn-search-act {
+  min-width: 25px;
+  min-height: 25px;
+  max-height: 25px;
+  display: flex;
+  justify-content: center;
+  background-image: url(../img/searchicon.jpg);
+  background-size: cover;
+  transition: 0.5s;
+  margin-top: 0.5%;
+  margin-left: 5px;
+}
+.btn-search-act:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.input-search {
+  height: 80%;
+  width: 30vw;
+  border: none;
+  font-size: 20px;
 }
 
 /* ---------- Articulo Destacado ----------*/
@@ -1398,12 +1471,12 @@ a {
 }
 .carrito-section .carrito-container {
   width: fit-content;
-  height: 0.1vh;
+  height: 100vh;
   position: fixed;
   padding-top: 90px;
   padding-bottom: 100px;
   background-color: #e2e2e2;
-  transition: 1s;
+  transition: 0.5s;
   transform: translateX(400px);
 }
 .carrito-section .carrito-container-on {
@@ -1413,7 +1486,7 @@ a {
   padding-top: 90px;
   padding-bottom: 100px;
   background-color: #e2e2e2;
-  transition: 1s;
+  transition: 0.5s;
   transform: translateX(0px);
 }
 .carrito-section .titulo-btnclose-carrito-container {

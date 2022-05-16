@@ -30,34 +30,40 @@ function generarCardsEnCarrito(carrito){
     mostrarCardsCarrito(acumuladorDeCards)
 }
 
-function cantidadTotalCarrito (){  
+function datosCarrito(){
+    cantidadTotalCarritoBtn()
+    precioTotal() 
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//----------------------------------------------------BOTONES & CARRITO----------------------------------------------------------------------------------//
+carritoBtn()
+function carritoBtn(){
+    const btnCarrito = document.getElementById("btn-carrito")
+    btnCarrito.addEventListener("click", function aC (){const carritoContainer = document.getElementById("carrito-container")
+    const btnCarritoAddClass = carritoContainer.classList
+    btnCarritoAddClass.toggle("carrito-container-on")
+    const btnCerrarCarrito = document.getElementById("btnclose")
+    btnCerrarCarrito.addEventListener("click", function (){ const carritoContainer =document.getElementById("carrito-container")
+    carritoContainer.className=("carrito-container")
+    })
+}) 
+}
+function cantidadTotalCarritoBtn(){  
     const totalProductos = carrito.reduce((acc, producto) => (acc + producto.cantidad), 0)
-    document.getElementById('cantidad-carrito').innerHTML = totalProductos
+    const contadorCarrito = document.getElementById('cantidad-carrito')
+    contadorCarrito.innerHTML = totalProductos
+    if(totalProductos===0){
+        contadorCarrito.className=("cantidad-carrito")
+    } else {
+        contadorCarrito.className=("cantidad-carrito-effect")
+    }
 }
 function precioTotal(){
 
     const precio = carrito.reduce((acc, biciEnCarrito) => ( acc + (biciEnCarrito.precio * biciEnCarrito.cantidad) ), 0)
     document.getElementById("preciototal").innerHTML= precio
 }
-function datosCarrito(){
-    cantidadTotalCarrito()
-    precioTotal()
-    localStorage.setItem("carrito", JSON.stringify(carrito))
-}
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//----------------------------------------------------BOTONES CARRITO----------------------------------------------------------------------------------//
-
-    const btnCarrito = document.getElementById("btn-carrito")
-    btnCarrito.addEventListener("click", function aC (){const carritoContainer = document.getElementById("carrito-container")
-    carritoContainer.className=("carrito-container-on")})
-
-    const btnCerrarCarrito = document.getElementById("btnclose")
-    btnCerrarCarrito.addEventListener("click", function (){ const carritoContainer =document.getElementById("carrito-container")
-        carritoContainer.className=("carrito-container")
-    })
-
-
-
 function eliminar(idProducto){
     const productoAEliminar = carrito.find(el=> el.id === idProducto)
     let pos = carrito.indexOf(productoAEliminar)             

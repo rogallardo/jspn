@@ -20,9 +20,12 @@ function generadorDeCards(bicis) {
                         </div> 
                     </div>`  
         productosContainer.append(itemContainer)  
+        
 }};
 generadorDeCards(bicis);
-btnAct (carrito)
+btnCardAgregado ()
+mostrarBarraBusqueda ()
+motorBusqueda ()
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //---------------------------------------------------BOTONES CARDS------------------------------------------------------------------------------------//
 function agregarAlCarrito(idProducto){
@@ -33,14 +36,41 @@ function agregarAlCarrito(idProducto){
             productoAgregado.stock--;
             productoAgregado.cantidad++; 
             generarCardsEnCarrito(carrito)
-            btnAct(carrito)
+            btnCardAgregado()
             datosCarrito()        
     }   
 }
-function btnAct (carrito) {
-    carrito.forEach((bici) => {
-        const productoAgregadoBtn = document.getElementById(`agregCarrito${bici.id}`);
-        productoAgregadoBtn.innerHTML =`Agregado`;
+function btnCardAgregado () {
+    carrito.forEach((bici) => {  
+        let productoAgregadoBtn = document.getElementById(`agregCarrito${bici.id}`);
+        if(productoAgregadoBtn !== null){
+             productoAgregadoBtn.innerHTML =`Agregado`;
         productoAgregadoBtn.className = `btn-prod3`
+        }  
     })
 }
+function mostrarBarraBusqueda (){
+    const btnSearch = document.getElementById("btn-search")
+    btnSearch.addEventListener("click", () => { 
+    const barraDeBusqueda = document.getElementById("input-search-container")
+    const barraDeBusquedaClase = barraDeBusqueda.classList
+    barraDeBusquedaClase.toggle("input-search-container-on")
+    })   
+}
+function motorBusqueda (){  
+    const inputSearch = document.getElementById("input-search")
+    inputSearch.addEventListener("input", (e) => {
+    const value = e.target.value  
+    const result = bicis.filter(item => item.modelo.toLowerCase().includes(value) || item.equipamiento.toLowerCase().includes(value))
+    const searchAction = document.getElementById("btn-search-act")
+    searchAction.addEventListener("click", function mostrarResultado(){
+    const productosContainer= document.getElementById('productos-container')
+    productosContainer.innerHTML=``;
+    generadorDeCards(result)
+    btnCardAgregado ()  
+    })   
+})
+
+}
+
+
