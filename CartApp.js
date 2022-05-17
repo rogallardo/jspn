@@ -6,22 +6,22 @@ const mostrarCardsCarrito = (card) => document.getElementById("carrito").innerHT
 generarCardsEnCarrito(carrito)
 function generarCardsEnCarrito(carrito){
     let acumuladorDeCards = ``
-    carrito.forEach((bici) => {
+    carrito.forEach((producto) => {
         acumuladorDeCards +=`
                         <div id="MTB" class="item-prod-carrito">
                             <div class="item-img-container-carrito">
-                                <img class= "item-img-carrito" src="../img/prod${bici.id}.jpg" alt= "fotos"
+                                <img class= "item-img-carrito" src="../img/prod${producto.id}.jpg" alt= "fotos"
                                 </div>
                             </div>
                             <div class="item-desc-container-carrito">
-                                <a onclick="eliminar(${bici.id})" class="btn-elim" >Eliminar</a>
-                                <h4 class="card-title">${bici.modelo}</h4>
-                                <h5>${bici.equipamiento}</h5>
-                                <h6>ARS $${bici.precio}</h6>
+                                <a onclick="eliminar(${producto.id})" class="btn-elim" >Eliminar</a>
+                                <h4 class="card-title">${producto.modelo}</h4>
+                                <h5>${producto.equipamiento}</h5>
+                                <h6>ARS $${producto.precio}</h6>
                                 <div class="cantidad-container">
-                                    <a onclick="dismCant(${bici.id})" id= "cantidad-${bici.id}" class="btn-cant1">-</a>
-                                    <a  id="contadorCant${bici.id}" class="cant"> ${bici.cantidad} </a>
-                                    <a onclick="aumentCant(${bici.id})" id= "cantidad+${bici.id}" class ="btn-cant2">+ </a>                          
+                                    <a onclick="dismCant(${producto.id})" id= "cantidad-${producto.id}" class="btn-cant1">-</a>
+                                    <a  id="contadorCant${producto.id}" class="cant"> ${producto.cantidad} </a>
+                                    <a onclick="aumentCant(${producto.id})" id= "cantidad+${producto.id}" class ="btn-cant2">+ </a>                          
                                 </div>
                             </div>
                         </div>`
@@ -61,7 +61,7 @@ function cantidadTotalCarritoBtn(){
 }
 function precioTotal(){
 
-    const precio = carrito.reduce((acc, biciEnCarrito) => ( acc + (biciEnCarrito.precio * biciEnCarrito.cantidad) ), 0)
+    const precio = carrito.reduce((acc, productoEnCarrito) => ( acc + (productoEnCarrito.precio * productoEnCarrito.cantidad) ), 0)
     document.getElementById("preciototal").innerHTML= precio
 }
 function eliminar(idProducto){
