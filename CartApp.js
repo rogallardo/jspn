@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //--------------------------------------------------------CARRITO----------------------------------------------------------------------------------------//
-const carrito = [];
+const carrito = JSON.parse(localStorage.getItem("carrito") || []);
 datosCarrito()
 const mostrarCardsCarrito = (card) => document.getElementById("carrito").innerHTML = card;
 generarCardsEnCarrito(carrito)
@@ -33,7 +33,7 @@ function generarCardsEnCarrito(carrito){
 function datosCarrito(){
     cantidadTotalCarritoBtn()
     precioTotal() 
-    
+    localStorage.setItem("carrito", JSON.stringify(carrito))
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //----------------------------------------------------BOTONES & CARRITO----------------------------------------------------------------------------------//
