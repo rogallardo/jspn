@@ -600,6 +600,43 @@ $paleta_sidebar: ('color1': black,
 		z-index: 1000;
 	
 	}
+	.input-search-container-on{
+			width: 100vw;
+			height: 45px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index:1000;
+			position:fixed;
+			background-color: #ffffffd3;
+			transition: 0.2s;
+			margin-top: 100px		
+			
+	}
+	.btn-search-act{
+		min-width: 25px;
+		min-height: 25px;
+		max-height: 25px;
+		display: flex;
+		justify-content: center;
+		background-image: url(../img/searchicon.jpg);
+		background-size: cover;	
+		transition: 0.5s;
+		margin-top:0.5%;
+		margin-left:5px;
+		&:hover {
+			transform: scale(1.2);
+			cursor:pointer;	
+			}
+		}	
+	.input-search{
+		height: 80%;
+		width: 30vw;
+		border: none;
+		font-size: 20px;
+	
+	}
+	
 
 	/* ---------- Articulo Destacado ----------*/
 	.destacado {

@@ -511,6 +511,43 @@ a {
     z-index: 1000;
   }
 
+  .input-search-container-on {
+    width: 100vw;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    position: fixed;
+    background-color: #ffffffd3;
+    transition: 0.2s;
+    margin-top: 100px;
+  }
+
+  .btn-search-act {
+    min-width: 25px;
+    min-height: 25px;
+    max-height: 25px;
+    display: flex;
+    justify-content: center;
+    background-image: url(../img/searchicon.jpg);
+    background-size: cover;
+    transition: 0.5s;
+    margin-top: 0.5%;
+    margin-left: 5px;
+  }
+  .btn-search-act:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
+  .input-search {
+    height: 80%;
+    width: 30vw;
+    border: none;
+    font-size: 20px;
+  }
+
   /* ---------- Articulo Destacado ----------*/
   .destacado {
     grid-area: destacado;
@@ -1507,7 +1544,7 @@ a {
   padding-bottom: 100px;
   background-color: #e2e2e2;
   transition: 0.5s;
-  transform: translateX(-15px);
+  transform: translateX(0px);
 }
 .carrito-section .titulo-btnclose-carrito-container {
   display: flex;
@@ -1533,7 +1570,7 @@ a {
   cursor: pointer;
 }
 .carrito-section .carrito-body {
-  height: 100%;
+  height: fit-content;
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -1777,7 +1814,17 @@ a {
     background-color: #272727;
   }
   .grid-container-productos .categorias-productos-container .productos-container-display-none {
-    display: none;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    grid-template-rows: auto;
+    font-size: 18px;
+    height: fit-content;
+    gap: 50px;
+    justify-content: center;
+    padding: 10%;
+    padding-top: 2%;
   }
   .grid-container-productos .categorias-productos-container .productos-container {
     color: white;
@@ -2118,7 +2165,6 @@ a {
     transform: translateX(1px);
   }
 }
-/* +++++++++++++++++++++++++++++++++++++++++   RESPONSIVE:  761-1023px ++++++++++++++++++++++++++++++ */
 /*---------- FOOTER ----------*/
 .footer {
   background-image: url(../img/footerbg1.jpeg);
