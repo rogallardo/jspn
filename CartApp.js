@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //--------------------------------------------------------CARRITO----------------------------------------------------------------------------------------//
-const carrito = JSON.parse(localStorage.getItem('carrito') || []);
+const carrito = JSON.parse(localStorage.getItem('carrito'))|| [];
 datosCarrito()
 const mostrarCardsCarrito = (card) => document.getElementById("carrito").innerHTML = card;
 generarCardsEnCarrito(carrito)

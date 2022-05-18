@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //---------------------------------------------CARDS EN PANTALLA-----------------------------------------------------------------------------------//
-carrito = JSON.parse(localStorage.getItem('carrito') || []);
+carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 function generadorDeCards(productos) {
     const productosContainer= document.getElementById('productos-container')
     productosContainer.innerHTML=``;
