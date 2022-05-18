@@ -31,7 +31,7 @@ function generarCardsEnCarrito(productodelcarrito){
 }
 
 function datosCarrito(){
-    cantidadTotalCarritoBtn()
+    // cantidadTotalCarritoBtn()
     precioTotal() 
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
