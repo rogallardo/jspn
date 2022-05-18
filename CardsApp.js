@@ -1,5 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //---------------------------------------------CARDS EN PANTALLA-----------------------------------------------------------------------------------//
+carrito = JSON.parse(localStorage.getItem('carrito') || []);
 function generadorDeCards(productos) {
     const productosContainer= document.getElementById('productos-container')
     productosContainer.innerHTML=``;
@@ -62,7 +63,7 @@ function BarraBusqueda (){
     const barraDeBusqueda = document.getElementById("input-search-container")
     const barraDeBusquedaClase = barraDeBusqueda.classList
     barraDeBusquedaClase.toggle("input-search-container-on")
-    // btnCardAgregado ()
+    btnCardAgregado ()
     motorBusqueda ()
     })   
 }
@@ -89,7 +90,7 @@ function motorBusqueda (){
         productosContainer.append(tituloSinResultados)   
     }
     generadorDeCards(result)
-    // btnCardAgregado ()  
+    btnCardAgregado ()  
     })   
 })
 

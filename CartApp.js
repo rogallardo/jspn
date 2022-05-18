@@ -1,12 +1,12 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //--------------------------------------------------------CARRITO----------------------------------------------------------------------------------------//
-const carrito = JSON.parse(localStorage.getItem("carrito") || []);
+const carrito = JSON.parse(localStorage.getItem('carrito') || []);
 datosCarrito()
 const mostrarCardsCarrito = (card) => document.getElementById("carrito").innerHTML = card;
-
-function generarCardsEnCarrito(productodelcarrito){
+generarCardsEnCarrito(carrito)
+function generarCardsEnCarrito(carrito){
     let acumuladorDeCards = ``
-    productodelcarrito.forEach((producto) => {
+    carrito.forEach((producto) => {
         acumuladorDeCards +=`
                         <div id="MTB" class="item-prod-carrito">
                             <div class="item-img-container-carrito">

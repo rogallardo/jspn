@@ -2,7 +2,7 @@
   "name": "jspn",
   "version": "1.0.0",
   "description": "jspn1",
-  "main": "CardsApp.js",
+  "main": "CartApp.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
