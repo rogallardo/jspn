@@ -22,12 +22,12 @@ function generadorDeCards(productos) {
                             </div> 
                         </div>`  
         productosContainer.append(itemContainer)
-        // btnCardAgregado () 
+        btnCardAgregado () 
                 
 }};
 
 mostrarProductoPorCategoria ()
-// btnCardAgregado ()
+btnCardAgregado ()
 BarraBusqueda ()
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -40,20 +40,20 @@ function agregarAlCarrito(idProducto){
             productoAgregado.stock--;
             productoAgregado.cantidad++; 
             generarCardsEnCarrito(carrito)
-            // btnCardAgregado()
+            btnCardAgregado()
             datosCarrito()
                    
     }   
 }
-// function btnCardAgregado () {
-//     carrito.forEach((producto) => {  
-//         let productoAgregadoBtn = document.getElementById(`agregCarrito${producto.id}`);
-//         if(productoAgregadoBtn !== null){
-//              productoAgregadoBtn.innerHTML =`Agregado`;
-//         productoAgregadoBtn.className = `btn-prod3`
-//         }  
-//     })
-// }
+function btnCardAgregado () {
+    carrito.forEach((producto) => {  
+        let productoAgregadoBtn = document.getElementById(`agregCarrito${producto.id}`);
+        if(productoAgregadoBtn !== null){
+             productoAgregadoBtn.innerHTML =`Agregado`;
+        productoAgregadoBtn.className = `btn-prod3`
+        }  
+    })
+}
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //---------------------------------------------------INPUT SEARCH------------------------------------------------------------------------------------//
 function BarraBusqueda (){
