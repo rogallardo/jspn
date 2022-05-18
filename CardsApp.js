@@ -117,5 +117,21 @@ function mostrarProductoPorCategoria (){
         tituloCatContainer.className = `titulo-cat-container`
         tituloCat.innerHTML=`REPUESTOS`
         productosContainer.className=`productos-container`
-    })    
+    }) 
+    const btnCatAcc = document.getElementById("cat-ACC")
+    btnCatAcc.addEventListener("click", () =>{
+        const resultACC = productos.filter(item => item.categoria === "ACCESORIOS")
+        generadorDeCards(resultACC)
+        tituloCatContainer.className = `titulo-cat-container`
+        tituloCat.innerHTML=`ACCESORIOS`
+        productosContainer.className=`productos-container`
+    })  
+    const btnCatInd = document.getElementById("cat-IND")
+    btnCatInd.addEventListener("click", () =>{
+        const resultInd = productos.filter(item => item.categoria === "INDUMENTARIA")
+        generadorDeCards(resultInd)
+        tituloCatContainer.className = `titulo-cat-container`
+        tituloCat.innerHTML=`INDUMENTARIA`
+        productosContainer.className=`productos-container`
+    })       
 }

@@ -256,14 +256,14 @@
         transform: translateX(400px);
     }
     .carrito-container-on{
-        width: fit-content;
+        width: 400px;
         height: 100vh;
         position: fixed;
         padding-top: 90px;
         padding-bottom: 100px;
         background-color: rgb(226, 226, 226);
         transition: 0.5s;
-        transform: translateX(0px);     
+        transform: translateX(-15px);     
     }
     
     .titulo-btnclose-carrito-container{

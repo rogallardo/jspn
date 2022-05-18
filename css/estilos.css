@@ -1500,14 +1500,14 @@ a {
   transform: translateX(400px);
 }
 .carrito-section .carrito-container-on {
-  width: fit-content;
+  width: 400px;
   height: 100vh;
   position: fixed;
   padding-top: 90px;
   padding-bottom: 100px;
   background-color: #e2e2e2;
   transition: 0.5s;
-  transform: translateX(0px);
+  transform: translateX(-15px);
 }
 .carrito-section .titulo-btnclose-carrito-container {
   display: flex;
