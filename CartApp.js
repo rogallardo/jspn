@@ -3,10 +3,10 @@
 const carrito = JSON.parse(localStorage.getItem("carrito") || []);
 datosCarrito()
 const mostrarCardsCarrito = (card) => document.getElementById("carrito").innerHTML = card;
-generarCardsEnCarrito(carrito)
-function generarCardsEnCarrito(carrito){
+
+function generarCardsEnCarrito(productodelcarrito){
     let acumuladorDeCards = ``
-    carrito.forEach((producto) => {
+    productodelcarrito.forEach((producto) => {
         acumuladorDeCards +=`
                         <div id="MTB" class="item-prod-carrito">
                             <div class="item-img-container-carrito">
