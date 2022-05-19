@@ -238,37 +238,37 @@
     }     
 }
 .carrito-section{
-    z-index: 1000;
+
     width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: right;
     position: absolute;
-    margin-top:20px;
-    
+       
     .carrito-container{
         width: fit-content;
-        height: 100vh;
-        position: fixed;
-        padding-top: 90px;
-        padding-bottom: 100px;
+        height: 100%;
+        position: fixed;      
         background-color: rgb(226, 226, 226);
         transition: 0.5s;
         transform: translateX(400px);
+        padding-top: 100px;
+        z-index: 1000;
     }
     .carrito-container-on{
-        width: 400px;
-        height: 100vh;
+        width: fit-content;
+        height: 100%;
         position: fixed;
-        padding-top: 90px;
-        padding-bottom: 100px;
         background-color: rgb(226, 226, 226);
         transition: 0.5s;
-        transform: translateX(0px);     
+        transform: translateX(0px);
+        padding-top: 100px;
+        z-index: 1000;
+             
     }
-    
     .titulo-btnclose-carrito-container{
         display:flex;
-        height: fit-content;
+        height: 10%;
         width: 400px;
         justify-content: space-between;
         align-items: center;
@@ -284,14 +284,32 @@
              .btnclose{
                 width: 25px;
                 height: 25px;
-                background-image: url(./img/close.png);
-                background-size: cover;
+                align-items: center;
+                justify-content: center;
                 display: flex;
+                flex-direction: column;
                 cursor: pointer;
+                .border-top-close{
+                    display: flex;
+                    position: absolute;
+                    width: 20px;
+                    height: 2px;
+                    background-color: black;
+                    transform: rotate(45deg) ;       
+                }
+                .border-bottom-close{
+                    display: flex;
+                    position: absolute;
+                    width: 20px;
+                    height: 2px;
+                    background-color: black;
+                    transform: rotate(-45deg) 
+                }
             }                
-        }  
-        .carrito-body{
-            height: fit-content;  
+    }  
+    .carrito-body{
+        
+            height: 80%;  
             width: 400px;
             display: flex;
             flex-direction: column;
@@ -442,8 +460,20 @@
                     }
                 }
             }
-        }     
+    }
+    .total-container{
+        justify-content: left;
+        align-items: center;
+        display: flex;
+        height: 10%;
+        padding-left: 30px;
+        
+        font-size: 20px;
+        
+    }
 }
+   
+
 // ***********************************************************************************************************************************//
 /* +++++++++++++++++++++++++++++++++++++++++   RESPONSIVE:  200-760px ++++++++++++++++++++++++++++++ */
 @media only screen and (min-width: 200px) and (max-width: 760px) {

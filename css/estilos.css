@@ -188,9 +188,10 @@ a {
   justify-content: center;
   align-items: center;
   position: fixed;
-  background-color: #fffffffa;
-  margin-top: 50px;
-  transition: 0.2s;
+  background-color: #ffffff;
+  z-index: 1000;
+  transition: 0.3s;
+  margin-top: 55px;
 }
 
 .input-search-container-on {
@@ -201,8 +202,8 @@ a {
   align-items: center;
   z-index: 1000;
   position: fixed;
-  background-color: #ffffffd3;
-  transition: 0.2s;
+  background-color: #ffffff;
+  transition: 0.3s;
   margin-top: 100px;
 }
 
@@ -219,6 +220,23 @@ a {
   margin-left: 5px;
 }
 .btn-search-act:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.btn-filter {
+  min-width: 25px;
+  min-height: 25px;
+  max-height: 25px;
+  display: flex;
+  justify-content: center;
+  background-image: url(../img/filtrosicon.png);
+  background-size: cover;
+  transition: 0.5s;
+  margin-top: 0.5%;
+  margin-left: 5px;
+}
+.btn-filter:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
@@ -1519,36 +1537,35 @@ a {
 }
 
 .carrito-section {
-  z-index: 1000;
   width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: right;
   position: absolute;
-  margin-top: 20px;
 }
 .carrito-section .carrito-container {
   width: fit-content;
-  height: 100vh;
+  height: 100%;
   position: fixed;
-  padding-top: 90px;
-  padding-bottom: 100px;
   background-color: #e2e2e2;
   transition: 0.5s;
   transform: translateX(400px);
+  padding-top: 100px;
+  z-index: 1000;
 }
 .carrito-section .carrito-container-on {
-  width: 400px;
-  height: 100vh;
+  width: fit-content;
+  height: 100%;
   position: fixed;
-  padding-top: 90px;
-  padding-bottom: 100px;
   background-color: #e2e2e2;
   transition: 0.5s;
   transform: translateX(0px);
+  padding-top: 100px;
+  z-index: 1000;
 }
 .carrito-section .titulo-btnclose-carrito-container {
   display: flex;
-  height: fit-content;
+  height: 10%;
   width: 400px;
   justify-content: space-between;
   align-items: center;
@@ -1564,13 +1581,30 @@ a {
 .carrito-section .titulo-btnclose-carrito-container .btnclose {
   width: 25px;
   height: 25px;
-  background-image: url(./img/close.png);
-  background-size: cover;
+  align-items: center;
+  justify-content: center;
   display: flex;
+  flex-direction: column;
   cursor: pointer;
 }
+.carrito-section .titulo-btnclose-carrito-container .btnclose .border-top-close {
+  display: flex;
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  transform: rotate(45deg);
+}
+.carrito-section .titulo-btnclose-carrito-container .btnclose .border-bottom-close {
+  display: flex;
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  transform: rotate(-45deg);
+}
 .carrito-section .carrito-body {
-  height: fit-content;
+  height: 80%;
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -1717,6 +1751,14 @@ a {
   color: #6caf99;
   cursor: pointer;
   transform: translateX(1px);
+}
+.carrito-section .total-container {
+  justify-content: left;
+  align-items: center;
+  display: flex;
+  height: 10%;
+  padding-left: 30px;
+  font-size: 20px;
 }
 
 /* +++++++++++++++++++++++++++++++++++++++++   RESPONSIVE:  200-760px ++++++++++++++++++++++++++++++ */

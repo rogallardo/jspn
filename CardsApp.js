@@ -65,7 +65,7 @@ function BarraBusqueda (){
     const barraDeBusquedaClase = barraDeBusqueda.classList
     barraDeBusquedaClase.toggle("input-search-container-on")
     btnCardAgregado ()
-   
+
     })   
 }
 function motorBusqueda (){  
@@ -73,8 +73,9 @@ function motorBusqueda (){
     inputSearch.addEventListener("input",(e) => {
     const value = e.target.value  
     const result = productos.filter(item => item.modelo.toLowerCase().includes(value) || item.equipamiento.toLowerCase().includes(value))
-    const searchAction = document.getElementById("btn-search-act")
-    searchAction.addEventListener("click", function mostrarResultado(){
+    inputSearch.addEventListener("keypress", function (e){
+        if(e.key === 'Enter'){
+        
     const productosContainer= document.getElementById('productos-container')
     productosContainer.className=`productos-container`
     productosContainer.innerHTML=``;
@@ -90,9 +91,12 @@ function motorBusqueda (){
         tituloSinResultados.className="titulo-sin-resultado"    
         productosContainer.append(tituloSinResultados)   
     }
+
     generadorDeCards(result)
     btnCardAgregado ()  
-    })   
+}
+    })
+
 })
 
 }

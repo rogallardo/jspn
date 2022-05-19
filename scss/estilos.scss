@@ -200,9 +200,10 @@ a {
 	justify-content: center;
 	align-items: center;
 	position:fixed;
-	background-color: #fffffffa;
-	margin-top: 50px;
-	transition: 0.2s;
+	background-color: #ffffff;
+	z-index:1000;
+	transition: 0.3s;
+	margin-top: 55px;
 	
 
 }
@@ -214,8 +215,8 @@ a {
 		align-items: center;
 		z-index:1000;
 		position:fixed;
-		background-color: #ffffffd3;
-		transition: 0.2s;
+		background-color: #ffffff;
+		transition: 0.3s;
 		margin-top: 100px		
 		
 }
@@ -226,6 +227,22 @@ a {
 	display: flex;
 	justify-content: center;
 	background-image: url(../img/searchicon.jpg);
+	background-size: cover;	
+	transition: 0.5s;
+	margin-top:0.5%;
+	margin-left:5px;
+	&:hover {
+		transform: scale(1.2);
+		cursor:pointer;	
+		}
+	}
+	.btn-filter{
+		min-width: 25px;
+	min-height: 25px;
+	max-height: 25px;
+	display: flex;
+	justify-content: center;
+	background-image: url(../img/filtrosicon.png);
 	background-size: cover;	
 	transition: 0.5s;
 	margin-top:0.5%;
