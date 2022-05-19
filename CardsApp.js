@@ -65,7 +65,7 @@ function BarraBusqueda (){
     const barraDeBusquedaClase = barraDeBusqueda.classList
     barraDeBusquedaClase.toggle("input-search-container-on")
     btnCardAgregado ()
-    motorBusqueda ()
+   
     })   
 }
 function motorBusqueda (){  
