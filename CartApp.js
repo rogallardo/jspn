@@ -14,8 +14,7 @@ function generarCardsEnCarrito(carrito){
                                 </div>
                             </div>
                             <div class="item-desc-container-carrito">
-                                <a onclick="eliminar(${producto.id})" class="btn-elim" >Eliminar</a>
-                                <h4 class="card-title">${producto.modelo}</h4>
+                                <h4>${producto.modelo}</h4>
                                 <h5>${producto.equipamiento}</h5>
                                 <h6>ARS $${producto.precio}</h6>
                                 <div class="cantidad-container">
@@ -23,6 +22,7 @@ function generarCardsEnCarrito(carrito){
                                     <a  id="contadorCant${producto.id}" class="cant"> ${producto.cantidad} </a>
                                     <a onclick="aumentCant(${producto.id})" id= "cantidad+${producto.id}" class ="btn-cant2">+ </a>                          
                                 </div>
+                                <a onclick="eliminar(${producto.id})" class="btn-elim" >Eliminar</a>
                             </div>
                         </div>`
                        

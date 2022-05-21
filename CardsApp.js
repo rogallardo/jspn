@@ -13,7 +13,6 @@ function generadorDeCards(productos) {
                                 <img class= "item-img" src="../img/prod${producto.id}.jpg" alt= "fotos"
                                 </div>
                           </div>
-
                             <div id= "item-desc-container" class="item-desc-container">
                                 <a class="btn-prod" >VER PRODUCTO</a>
                                 <h4 class="card-title">${producto.modelo}</h4>
@@ -29,8 +28,8 @@ function generadorDeCards(productos) {
 
 mostrarProductoPorCategoria ()
 btnCardAgregado ()
-BarraBusqueda ()
 motorBusqueda ()
+BarraBusqueda ()
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //---------------------------------------------------BOTONES CARDS------------------------------------------------------------------------------------//
@@ -62,20 +61,18 @@ function BarraBusqueda (){
     const btnSearch = document.getElementById("btn-search")
     btnSearch.addEventListener("click", () => { 
     const barraDeBusqueda = document.getElementById("input-search-container")
-    const barraDeBusquedaClase = barraDeBusqueda.classList
-    barraDeBusquedaClase.toggle("input-search-container-on")
+    const barraDeBusquedaClase = barraDeBusqueda.classList       
+    barraDeBusquedaClase.toggle("input-search-container-on")        
     btnCardAgregado ()
-
     })   
 }
 function motorBusqueda (){  
     const inputSearch = document.getElementById("input-search")
     inputSearch.addEventListener("input",(e) => {
-    const value = e.target.value  
-    const result = productos.filter(item => item.modelo.toLowerCase().includes(value) || item.equipamiento.toLowerCase().includes(value))
     inputSearch.addEventListener("keypress", function (e){
         if(e.key === 'Enter'){
-        
+        const value = e.target.value  
+    const result = productos.filter(item => item.modelo.toLowerCase().includes(value) || item.equipamiento.toLowerCase().includes(value))             
     const productosContainer= document.getElementById('productos-container')
     productosContainer.className=`productos-container`
     productosContainer.innerHTML=``;
@@ -96,9 +93,7 @@ function motorBusqueda (){
     btnCardAgregado ()  
 }
     })
-
 })
-
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //---------------------------------------------------FILTROS------------------------------------------------------------------------------------//

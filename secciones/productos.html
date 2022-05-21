@@ -20,27 +20,40 @@
         content="BIKESHOP, BICICLETAS DE MONTAÑA, BICICLETAS DE CARRERAS, ACCESORIOS, INDUMENTARIA, EQUIPOS">
 </head>
 
-<body>
-    <div class="grid-container-productos">
-        <header class="header">
+<body id="body">
+    <div id="grid-container-productos" class="grid-container-productos">
+
+        <header id="header" class="header">
             <div class="logo-container">
                 <h1 class="logo-titulo">BikeShop</h1>
             </div>
-            <nav class="menu">
-                <a href="../index.html">INICIO</a>
-                <a class="menuselect" href="#">>PRODUCTOS</a>
-                <a href="contacto.html">CONTACTO</a>
-                <a href="galeria.html">GALERÍA</a>
-                <a href="nosotros.html">NOSOTROS</a>
-                <div class="search-carrito-container">
-                    <div id="btn-search" class="btn-search">
-                    </div>
-                    <div id="btn-carrito" class="btn-carrito">
-                        <p class="cantidad-carrito" id="cantidad-carrito">0</p>
-                    </div>
-                </div>
 
+            <nav class="menu">
+                    <div class="a-btn-container">
+                        <a href="../index.html">INICIO</a>
+                        <a class="menuselect" href="#">>PRODUCTOS</a>
+                        <a href="contacto.html">CONTACTO</a>
+                        <a href="galeria.html">GALERÍA</a>
+                        <a href="nosotros.html">NOSOTROS</a>
+                    </div>
+                    <div class="search-carrito-btn-container">
+                        <div id="btn-search" class="btn-search">
+                        </div>
+                        <div id="btn-carrito" class="btn-carrito">
+                            <p class="cantidad-carrito" id="cantidad-carrito">0</p>
+                        </div>
+                    </div>
             </nav>
+            
+            <section class="input-search-section">
+                    <div id="input-search-container" class="input-search-container">
+                        <input type="text" id="input-search" class="form-control input-search" placeholder="Buscar..."
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <a href="#titulo-cat-container" id="btn-search-act" class="btn-search-act"></a>
+                        <a class="btn-filter"></a>
+                    </div>
+        
+            </section>
 
             <div class="mobile-menu">
                 <nav class="navbar navbar-expand-md bg-light navbar-light">
@@ -77,59 +90,55 @@
             </div>
 
         </header>
-        <div id="input-search-container" class="input-search-container">
-                <input type="text" id="input-search"class="form-control input-search" placeholder="Buscar..." aria-label="Recipient's username" aria-describedby="button-addon2" >
-                <a href="#titulo-cat-container" id="btn-search-act" class="btn-search-act"></a>
-                <a class="btn-filter"></a>
-       </div>
         
+
         <section class="carrito-section">
             <div id="carrito-container" class="carrito-container">
                 <div class="titulo-btnclose-carrito-container">
-        
-                        <h5 class="titulo-carrito">Carrito de compra</h5>
-                        <div id="btnclose" class="btnclose">
-                            <a class="border-top-close"></a>
-                            <a class="border-bottom-close"></a>
-                        </div>
-                  
+
+                    <h5 class="titulo-carrito">Carrito de compra</h5>
+                    <div id="btnclose" class="btnclose">
+                        <a class="border-top-close"></a>
+                        <a class="border-bottom-close"></a>
+                    </div>
+
                 </div>
                 <div id="carrito" class="carrito-body">
                 </div>
                 <div class="total-container">
                     <p>Total ARS $ <span id="preciototal">0</span></p>
                 </div>
-            
+
 
             </div>
         </section>
         <main class="categorias-productos-container">
             <!-- ***************************************CONTENEDOR DE CARDS CATEGORIAS******************************************* -->
             <div class="categorias-container">
-                <div id="cat-MTB"class="item-cat cat-MTB">
+                <div id="cat-MTB" class="item-cat cat-MTB">
                     <div class="bright">
                         <a href="#titulo-cat-container" class="item-cat-titulo">MOUNTAIN-BIKE</a>
                     </div>
                 </div>
-                <div id="cat-REP"class="item-cat cat-repuestos">
+                <div id="cat-REP" class="item-cat cat-repuestos">
                     <div class="bright">
                         <a href="#titulo-cat-container" class="item-cat-titulo">REPUESTOS</a>
                     </div>
                 </div>
-                <div id="cat-ACC"class="item-cat cat-accesorios">
+                <div id="cat-ACC" class="item-cat cat-accesorios">
                     <div class="bright">
                         <a href="#titulo-cat-container" class="item-cat-titulo">ACCESORIOS</a>
                     </div>
                 </div>
-                <div id="cat-IND"class="item-cat cat-indumentaria">
+                <div id="cat-IND" class="item-cat cat-indumentaria">
                     <div class="bright">
                         <a href="#titulo-cat-container" class="item-cat-titulo">INDUMENTARIA</a>
                     </div>
                 </div>
             </div>
             <!-- *************************************** TITULO DE CATEGORIA *************************************************** -->
-            <div id="titulo-cat-container"class="">
-                <h2 id="titulo-cat"class="titulo-cat"></h2>
+            <div id="titulo-cat-container" class="">
+                <h2 id="titulo-cat" class="titulo-cat"></h2>
             </div>
             <!-- ***************************************CONTENEDOR DE CARDS PRODUCTOS******************************************* -->
             <section class="productos-container" id="productos-container">
@@ -180,7 +189,8 @@
     <script src="../Products.js"></script>
     <script src="../CardsApp.js"></script>
     <script src="../CartApp.js"></script>
-    
+    <script src="../main.js"></script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -193,7 +203,7 @@
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    
+
 
     <script>
         AOS.init();

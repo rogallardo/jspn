@@ -10,7 +10,6 @@
         'categorias-productos-container	categorias-productos-container  categorias-productos-container'
         'footer	 		footer 		footer';
    .categorias-productos-container {
-        margin-top: 50px;
         grid-area: categorias-productos-container;
         .categorias-container {
             min-height: 100vh;
@@ -20,12 +19,16 @@
             align-items: center;
             gap: 10px;
             padding: 5%;
+            margin-top: 50px;
+            padding-top: 0%;
+            padding-bottom: 0%;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(1, auto);
             grid-template-areas: 'cat-MTB cat-repuestos cat-accesorios cat-indumentaria';
             .item-cat {
                 height: 80vh;
-                width: 300px;
+                min-width: 100px;
+                max-width:400px ;
                 box-shadow: 5px 0px 10px rgb(155, 155, 155);
                 justify-content: center;
                 align-items: center;
@@ -73,13 +76,13 @@
         }
         .titulo-cat-container {
             width: 100vw;
-            height: 200px;
+            height: 120px;
             display: flex;
             justify-content: center;
             align-items:flex-end;
             text-align: center;
             .titulo-cat {
-                height: 100px;
+                height: 50px;
                 width: 1090px;
                 display: flex;
                 justify-content: center;
@@ -115,7 +118,7 @@
                 padding:0%;
                 margin: 0%;
                 .item-prod {
-                    min-height: 450px;
+                    height: 400px;
                     width: 320px;
                     text-decoration: none;
                     box-shadow: 5px 0px 10px rgb(155, 155, 155);
@@ -138,8 +141,8 @@
                         .item-img{
                             height: 100%;
                             width: 100%;
-                            background-size: cover;
-                            object-fit: cover
+                         
+                          
                             ;                    
                         }
                     }
@@ -151,9 +154,9 @@
                         padding: 2%;
                         justify-content: space-between;
                         h4 {
-                            font-size: 18px;
+                            font-size: 20px;
                             font-weight: lighter;
-                            color: black;
+                            color: rgb(0, 0, 0);
                             text-align: center;
                             height: fit-content;
                         }
@@ -236,243 +239,7 @@
             }
         }
     }     
-}
-.carrito-section{
-
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: right;
-    position: absolute;
-       
-    .carrito-container{
-        width: fit-content;
-        height: 100%;
-        position: fixed;      
-        background-color: rgb(226, 226, 226);
-        transition: 0.5s;
-        transform: translateX(400px);
-        padding-top: 100px;
-        z-index: 1000;
-    }
-    .carrito-container-on{
-        width: fit-content;
-        height: 100%;
-        position: fixed;
-        background-color: rgb(226, 226, 226);
-        transition: 0.5s;
-        transform: translateX(0px);
-        padding-top: 100px;
-        z-index: 1000;
-             
-    }
-    .titulo-btnclose-carrito-container{
-        display:flex;
-        height: 10%;
-        width: 400px;
-        justify-content: space-between;
-        align-items: center;
-        padding-left:30px;
-        padding-right:30px;
-        
-            .titulo-carrito{
-                width: fit-content;
-                height: 25px;
-                display: flex;
-                font-size: 25px;
-            }
-             .btnclose{
-                width: 25px;
-                height: 25px;
-                align-items: center;
-                justify-content: center;
-                display: flex;
-                flex-direction: column;
-                cursor: pointer;
-                .border-top-close{
-                    display: flex;
-                    position: absolute;
-                    width: 20px;
-                    height: 2px;
-                    background-color: black;
-                    transform: rotate(45deg) ;       
-                }
-                .border-bottom-close{
-                    display: flex;
-                    position: absolute;
-                    width: 20px;
-                    height: 2px;
-                    background-color: black;
-                    transform: rotate(-45deg) 
-                }
-            }                
-    }  
-    .carrito-body{
-        
-            height: 80%;  
-            width: 400px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow-y: scroll;
-            .item-prod-carrito {
-                min-height: 450px;
-                width: 300px;
-                text-decoration: none;
-                box-shadow: 5px 0px 10px rgb(155, 155, 155);
-                display: flex;
-                flex-direction: column;
-                margin-top: 3%;
-                .item-img-container-carrito {
-                    height: 60%;
-                    width: 100%;
-                    display: flex;
-                    padding: 3%;
-                    .item-img-carrito{
-                        height: 100%;
-                        width: 100%;
-                        background-size: cover;
-                    }
-                }
-                .item-desc-container-carrito {
-                    height: 40%;
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    padding: 3%;
-                    .btn-elim {
-                        height: 40px;
-                        font-size: 20px;
-                        font-family: 'Oswald', sans-serif;
-                        color: white;
-                        border: solid 1px rgb(104, 104, 104);
-                        background-color: rgb(104, 104, 104);
-                        transition: 0.5s;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        text-decoration: none;
-                        margin-bottom: 5px;
-                    
-                    
-                        &:hover {
-                            background-color: rgb(255, 255, 255);
-                            text-decoration: none;
-                            border: solid 1px black;
-                            color: rgb(0, 0, 0);
-                            cursor:pointer;
-                        }
-                    
-                    }
-                    h4 {
-                        font-size: 18px;
-                        font-weight: lighter;
-                        color: black;
-                        text-align: center;
-                        height: fit-content;
-                    }
-                    h5 {
-                        font-family: Arial, Helvetica, sans-serif;
-                        font-size: 16px;
-                        color: black;
-                        text-align: center;
-                        height: fit-content;
-                    }
-                    h6 {
-                        font-size: 18px;
-                        color: rgb(0, 0, 0);
-                        text-align: center;
-                    }
-                    .cantidad-container{
-                        height: 40px;
-                        font-size: 20px;
-                        font-family: 'Oswald', sans-serif;
-                        color: rgb(0, 0, 0);
-                        border-color: solid 1px black;
-                        background-color: rgb(255, 255, 255);
-                        transition: 0.5s;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        text-decoration: none;
-                        .cant {
-                            height: 40px;
-                            width: 40px;
-                            font-size: 20px;
-                            font-family: 'Oswald', sans-serif;
-                            color: rgb(0, 0, 0);
-                            border-color: solid 1px black;
-                            background-color: rgb(255, 255, 255);
-                            transition: 0.5s;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            text-decoration: none;
-                            &:hover {
-                                background-color: rgb(255, 255, 255);
-                                text-decoration: none;
-                                color: rgb(0, 0, 0);
-                            } 
-                        }
-                        .btn-cant1 {
-                            height: 40px;
-                            width: 40px;
-                            font-size: 20px;
-                            color: rgb(0, 0, 0);
-                            background-color: rgb(255, 255, 255);
-                            border: solid 1px rgb(255, 255, 255);
-                            transition: 0.9s;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            text-decoration: none;
-                            &:hover {
-                                background-color: rgb(255, 255, 255);
-                                text-decoration: none;
-                                border: solid 1px black;
-                                color: rgb(108, 175, 153);
-                                cursor: pointer;
-                                transform: translateX(-1px);
-                            }      
-                        }
-                        .btn-cant2 {
-                            height: 40px;
-                            width: 40px;
-                            font-size: 20px;
-                            color: rgb(0, 0, 0);
-                            background-color: rgb(255, 255, 255);
-                            border: solid 1px rgb(255, 255, 255);
-                            transition: 0.9s;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            text-decoration: none;          
-                            &:hover {
-                                background-color: rgb(255, 255, 255);
-                                text-decoration: none;
-                                border: solid 1px black;
-                                color: rgb(108, 175, 153);
-                                cursor: pointer;
-                                transform: translateX(1px);
-                            }
-                        
-                        }
-                    }
-                }
-            }
-    }
-    .total-container{
-        justify-content: left;
-        align-items: center;
-        display: flex;
-        height: 10%;
-        padding-left: 30px;
-        
-        font-size: 20px;
-        
-    }
-}
-   
+} 
 
 // ***********************************************************************************************************************************//
 /* +++++++++++++++++++++++++++++++++++++++++   RESPONSIVE:  200-760px ++++++++++++++++++++++++++++++ */
@@ -489,7 +256,7 @@
             'categorias-productos-container	categorias-productos-container  categorias-productos-container'
             'footer	 		footer 		footer';
        .categorias-productos-container {
-            margin-top: 50px;
+            margin-top: 0px;
             width: 100vw;
             grid-area: categorias-productos-container;
             .categorias-container {
@@ -729,217 +496,5 @@
             }
         }     
     }
-    .carrito-section{
-        z-index: 1000;
-        width: 100vw;
-        display: flex;
-        justify-content: right;
-        position: absolute;
-        margin-top:20px;
-        
-        .carrito-container{
-            width: 0px;
-            height: 0vh;
-            position: fixed;
-            padding-top: 90px;
-            padding-bottom: 100px;
-            background-color: rgb(226, 226, 226);
-            transition: 0.5s;
-            transform: translateX(400px);
-            display:none;
-        }
-        .carrito-container-on{
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            padding-top: 90px;
-            padding-bottom: 100px;
-            background-color: rgb(226, 226, 226);
-            transition: 0.5s;
-            transform: translateX(0px);
-               
-        }
-        
-        .titulo-btnclose-carrito-container{
-            display:flex;
-            height: fit-content;
-            width: 400px;
-            justify-content: space-between;
-            align-items: center;
-            padding-left:30px;
-            padding-right:30px;
-            
-                .titulo-carrito{
-                    width: fit-content;
-                    height: 25px;
-                    display: flex;
-                    font-size: 25px;
-                }
-                 .btnclose{
-                    width: 25px;
-                    height: 25px;
-                    background-image: url(/img/close.png);
-                    background-size: cover;
-                    display: flex;
-                    cursor: pointer;
-                }                
-            }  
-            .carrito-body{
-                height: 100%;  
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                overflow-y: scroll;
-                .item-prod-carrito {
-                    min-height: 450px;
-                    width: 90%;
-                    text-decoration: none;
-                    box-shadow: 5px 0px 10px rgb(155, 155, 155);
-                    display: flex;
-                    flex-direction: column;
-                    margin-top: 3%;
-                    .item-img-container-carrito {
-                        height: 60%;
-                        width: 100%;
-                        display: flex;
-                        padding: 3%;
-                        .item-img-carrito{
-                            height: 100%;
-                            width: 100%;
-                            background-size: cover;
-                        }
-                    }
-                    .item-desc-container-carrito {
-                        height: 40%;
-                        width: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        padding: 3%;
-                        .btn-elim {
-                            height: 40px;
-                            font-size: 20px;
-                            font-family: 'Oswald', sans-serif;
-                            color: white;
-                            border: solid 1px rgb(104, 104, 104);
-                            background-color: rgb(104, 104, 104);
-                            transition: 0.5s;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            text-decoration: none;
-                            margin-bottom: 5px;
-                        
-                        
-                            &:hover {
-                                background-color: rgb(255, 255, 255);
-                                text-decoration: none;
-                                border: solid 1px black;
-                                color: rgb(0, 0, 0);
-                                cursor:pointer;
-                            }
-                        
-                        }
-                        h4 {
-                            font-size: 18px;
-                            font-weight: lighter;
-                            color: black;
-                            text-align: center;
-                            height: fit-content;
-                        }
-                        h5 {
-                            font-family: Arial, Helvetica, sans-serif;
-                            font-size: 16px;
-                            color: black;
-                            text-align: center;
-                            height: fit-content;
-                        }
-                        h6 {
-                            font-size: 18px;
-                            color: rgb(0, 0, 0);
-                            text-align: center;
-                        }
-                        .cantidad-container{
-                            height: 40px;
-                            font-size: 20px;
-                            font-family: 'Oswald', sans-serif;
-                            color: rgb(0, 0, 0);
-                            border-color: solid 1px black;
-                            background-color: rgb(255, 255, 255);
-                            transition: 0.5s;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            text-decoration: none;
-                            .cant {
-                                height: 40px;
-                                width: 40px;
-                                font-size: 20px;
-                                font-family: 'Oswald', sans-serif;
-                                color: rgb(0, 0, 0);
-                                border-color: solid 1px black;
-                                background-color: rgb(255, 255, 255);
-                                transition: 0.5s;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                text-decoration: none;
-                                &:hover {
-                                    background-color: rgb(255, 255, 255);
-                                    text-decoration: none;
-                                    color: rgb(0, 0, 0);
-                                } 
-                            }
-                            .btn-cant1 {
-                                height: 40px;
-                                width: 40px;
-                                font-size: 20px;
-                                color: rgb(0, 0, 0);
-                                background-color: rgb(255, 255, 255);
-                                border: solid 1px rgb(255, 255, 255);
-                                transition: 0.9s;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                text-decoration: none;
-                                &:hover {
-                                    background-color: rgb(255, 255, 255);
-                                    text-decoration: none;
-                                    border: solid 1px black;
-                                    color: rgb(108, 175, 153);
-                                    cursor: pointer;
-                                    transform: translateX(-1px);
-                                }      
-                            }
-                            .btn-cant2 {
-                                height: 40px;
-                                width: 40px;
-                                font-size: 20px;
-                                color: rgb(0, 0, 0);
-                                background-color: rgb(255, 255, 255);
-                                border: solid 1px rgb(255, 255, 255);
-                                transition: 0.9s;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                text-decoration: none;          
-                                &:hover {
-                                    background-color: rgb(255, 255, 255);
-                                    text-decoration: none;
-                                    border: solid 1px black;
-                                    color: rgb(108, 175, 153);
-                                    cursor: pointer;
-                                    transform: translateX(1px);
-                                }
-                            
-                            }
-                        }
-                    }
-                }
-            }    
-                
-            
-            
-        
-        }
+
     }
