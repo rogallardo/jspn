@@ -29,7 +29,7 @@ function generadorDeCards(productos) {
 mostrarProductoPorCategoria ()
 btnCardAgregado ()
 motorBusqueda ()
-BarraBusqueda ()
+btnCloseOpenInputSearch ()
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //---------------------------------------------------BOTONES CARDS------------------------------------------------------------------------------------//
@@ -57,44 +57,61 @@ function btnCardAgregado () {
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //---------------------------------------------------INPUT SEARCH------------------------------------------------------------------------------------//
-function BarraBusqueda (){
+function btnCloseOpenInputSearch (){
     const btnSearch = document.getElementById("btn-search")
     btnSearch.addEventListener("click", () => { 
     const barraDeBusqueda = document.getElementById("input-search-container")
     const barraDeBusquedaClase = barraDeBusqueda.classList       
-    barraDeBusquedaClase.toggle("input-search-container-on")        
+    barraDeBusquedaClase.toggle("input-search-container-on")    
+    const btnCloseInputSearch = document.getElementById("btn-close2")
+    btnCloseInputSearch.addEventListener("click", () => {
+
+    barraDeBusqueda.classList.remove("input-search-container-on") 
+    })
     btnCardAgregado ()
+
     })   
 }
 function motorBusqueda (){  
     const inputSearch = document.getElementById("input-search")
-    inputSearch.addEventListener("input",(e) => {
-    inputSearch.addEventListener("keypress", function (e){
-        if(e.key === 'Enter'){
+    const btnSearchAct = document.getElementById("btn-search-act")
+
+    inputSearch.addEventListener("input",function filter (e) {
         const value = e.target.value  
-    const result = productos.filter(item => item.modelo.toLowerCase().includes(value) || item.equipamiento.toLowerCase().includes(value))             
-    const productosContainer= document.getElementById('productos-container')
-    productosContainer.className=`productos-container`
-    productosContainer.innerHTML=``;
-    const tituloCatContainer = document.getElementById("titulo-cat-container")
-    tituloCatContainer.className = `titulo-cat-container`
-    const tituloSection = document.getElementById("titulo-cat")
-    tituloSection.innerHTML=`RESULTADO DE BUSQUEDA`
-    if(result.length <1){
+       result = productos.filter(item => item.modelo.toLowerCase().includes(value) || item.equipamiento.toLowerCase().includes(value))             
         const productosContainer= document.getElementById('productos-container')
         productosContainer.className=`productos-container`
-        const tituloSinResultados = document.createElement('h2')
-        tituloSinResultados.innerHTML=`Sin resultados`; 
-        tituloSinResultados.className="titulo-sin-resultado"    
-        productosContainer.append(tituloSinResultados)   
-    }
-
-    generadorDeCards(result)
-    btnCardAgregado ()  
-}
+        productosContainer.innerHTML=``;
+        const tituloCatContainer = document.getElementById("titulo-cat-container")
+        tituloCatContainer.className = `titulo-cat-container`
+        const tituloSection = document.getElementById("titulo-cat")
+        tituloSection.innerHTML=`RESULTADO DE BUSQUEDA`
+        if(result.length ===0 ){
+            const productosContainer= document.getElementById('productos-container')
+            productosContainer.className=`productos-container`
+            const tituloSinResultados = document.createElement('h2')
+            tituloSinResultados.innerHTML=`Sin resultados`; 
+            tituloSinResultados.className="titulo-sin-resultado"    
+            productosContainer.append(tituloSinResultados)   
+        }else{
+            generadorDeCards(result) 
+        }  
     })
-})
-}
+///////////////////////////////////SCROLL A "RESULTADO"//////////////////////////////////////////////////
+        btnSearchAct.addEventListener("click", function searchAct(){  
+        
+        })
+        inputSearch.addEventListener("keydown", function (e){
+            if(e.key == 'Enter' ){
+               
+                const tituloCatContainer = document.getElementById("titulo-cat-container")
+                tituloCatContainer.scrollIntoView(true)
+    }
+ 
+        btnCardAgregado ()  
+    } )   
+
+}   
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //---------------------------------------------------FILTROS------------------------------------------------------------------------------------//
 function mostrarProductoPorCategoria (){
@@ -135,3 +152,4 @@ function mostrarProductoPorCategoria (){
         productosContainer.className=`productos-container`
     })       
 }
+

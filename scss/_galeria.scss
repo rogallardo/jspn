@@ -43,6 +43,15 @@
             'item8 item8'
             'item9 item9';
 
+            .titulo-loading{
+                position: absolute;
+                margin-left:10%; 
+                
+               
+                font-size: 20px;
+                color: rgb(110, 110, 110);
+            }
+
 
     }
 
@@ -50,6 +59,7 @@
         min-height: 100px;
         min-width: 100px;
         transition: transform 0.3s ease-in-out;
+        z-index: 2;
     }
 
     .item:hover {
@@ -159,6 +169,15 @@
             'item2 item5 item6'
             'item7 item8 item6'
             'item9 item9 item9';
+            
+        .titulo-loading{
+            position: absolute;
+            margin-left:10%; 
+            
+           
+            font-size: 20px;
+            color: rgb(110, 110, 110);
+        }
 
 
     }
@@ -166,17 +185,19 @@
     .item {
         min-height: 200px;
         min-width: 200px;
-        transition: transform 0.8s ease-in-out;
+        transition: transform 0.2s ease-in-out;
         overflow: hidden;
+        z-index: 2;
     }
 
     .item:hover {
-        transform: scale(1.05);
+        transform: scale(1.2);
         overflow: hidden;
     }
 
     .item1 {
-        background-image: url(../img/item1.jpg);
+        // background-image: url(../img/item1.jpg)
+        background-color: grey;
         background-size: cover;
         grid-area: item1;
         min-height: 300px;
@@ -184,51 +205,51 @@
     }
 
     .item2 {
-        background-image: url(../img/item2.jpg);
+        background-color: grey;
         background-size: cover;
         grid-area: item2;
     }
 
     .item3 {
-        background-image: url(../img/item3.jpg);
+        background-color: grey;
         background-size: cover;
         grid-area: item3;
         background-position-y: 30%;
     }
 
     .item4 {
-        background-image: url(../img/item4.jpg);
+        background-color: grey;
         background-size:cover;
         grid-area: item4;
         background-position-y: 60%;
     }
 
     .item5 {
-        background-image: url(../img/item5.jpg);
+        background-color: grey;
         background-size: cover;
         grid-area: item5;
     }
 
     .item6 {
-        background-image: url(../img/item6.jpg);
+        background-color: grey;
         background-size: cover;
         grid-area: item6;
     }
 
     .item7 {
-        background-image: url(../img/item7.jpg);
+        background-color: grey;
         background-size: cover;
         grid-area: item7;
     }
 
     .item8 {
-        background-image: url(../img/item8.jpg);
+        background-color: grey;
         background-size: cover;
         grid-area: item8;
     }
 
     .item9 {
-        background-image: url(../img/item9.jpg);
+        background-color: grey;
         background-size: cover;
         grid-area: item9;
         min-height: 500px;
