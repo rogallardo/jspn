@@ -1,3 +1,4 @@
+////////////////////////////////EFECTO DE OCULTAMIENTO PARCIAL EN EL MENU////////////////////////////////////
 function menuHide() {
     const header = document.getElementById("header")
     let lastScroll = 0;
@@ -13,8 +14,9 @@ function menuHide() {
     lastScroll = currentScroll;
   })
 }
+////////////////////////////////////API DE GOOGLE MAPS (se muestra en la seccion 'Nosotros')////////////////////
 function iniciarMap(){
-  var coord = {lat:-34.5956145 ,lng: -58.4431949};
+  var coord = {lat:-34.574868665319066, lng: -58.483606227087144}; 
   var map = new google.maps.Map(document.getElementById('map'),{
     zoom: 15,
     center: coord
@@ -25,5 +27,5 @@ function iniciarMap(){
   });
 }
 menuHide()
-// iniciarMap()
+iniciarMap()
 

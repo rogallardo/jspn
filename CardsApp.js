@@ -17,7 +17,7 @@ function generadorDeCards(productos) {
                                 <a class="btn-prod" >VER PRODUCTO</a>
                                 <h4 class="card-title">${producto.modelo}</h4>
                                 <h5>${producto.equipamiento}</h5>
-                                <h6>US$${producto.precio}</h6>
+                                <h6>$ ${producto.precio}</h6>
                                 <a onclick="agregarAlCarrito(${producto.id})"id= "agregCarrito${producto.id}" class="btn-prod2">+ Agregar al carrito </a>
                             </div> 
                         </div>`  
