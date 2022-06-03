@@ -103,11 +103,39 @@ function dismCant(idProducto){
     datosCarrito()
  
 }
+function comprarBtn(){
+    const comprarBtN = document.getElementById("btn-comprar")
+    comprarBtN.addEventListener("click", ()=> {
+        if(carrito.length >= 1){
+            compraConfirmada ()
+        }else{
+            carritoVacio()
+        }
+        
+    })
+}
+comprarBtn()
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //----------------------------------------------------ALERTS----------------------------------------------------------------------------------//
 function noHayStock(){
     swal({
-        title: "No hay más Stock de este producto!",
+        title: "No hay más stock de este producto!",
+        icon: "warning",
+        button: "Ok",
+      });
+}
+function compraConfirmada (){
+ 
+        swal({
+            title: "Compra confirmada",
+            text: "Gracias por elegirnos!",
+            icon: "success",
+            button: "Aceptar",
+          });  
+}
+function carritoVacio(){
+    swal({
+        title: "Tu carrito está vacio",
         icon: "warning",
         button: "Ok",
       });

@@ -19,59 +19,57 @@
 <body>
 	<div class="grid-container-galeria">
 		<header id="header" class="header">
-			<div class="logo-container">
-				<h1 class="logo-titulo">BikeShop</h1>
-			</div>
+            <div class="logo-container">
+                <h1 class="logo-titulo">BikeShop</h1>
+            </div>
+
             <nav class="menu">
-                <div class="a-btn-container">
-                    <a href="../index.html">INICIO</a>
-                    <a href="productos.html">PRODUCTOS</a>
-                    <a href="contacto.html">CONTACTO</a>
-                    <a class="menuselect" href="#">>GALERÍA</a>
-                    <a href="nosotros.html">NOSOTROS</a>
-                </div>
-                <div class="search-carrito-btn-container">
-                    <div>
+                    <div id="a-btn-container"class="a-btn-container">
+                        <a href="../index.html">INICIO</a>
+                        <a href="productos.html">PRODUCTOS</a>
+                        <a href="contacto.html">CONTACTO</a>
+                        <a class="menuselect" href="#">>GALERÍA</a>
+                        <a href="nosotros.html">NOSOTROS</a>
                     </div>
-                    <div id="btn-carrito" class="btn-carrito">
-                        <p class="cantidad-carrito" id="cantidad-carrito">0</p>
+                    <div class="search-carrito-btn-container">
+                        <div id="menu-mobile-btn" class="menu-mobile-btn">
+                            <a id="border-top-menumobile" class="border-top-menumobile"></a>
+                            <a id="border-centertop-menumobile" class="border-centertop-menumobile"></a>
+                            <a id="border-centerbottom-menumobile"class="border-centerbottom-menumobile"></a>
+                            <a id="border-bottom-menumobile" class="border-bottom-menumobile"></a>
+                        </div>
+						<div></div>
+                        <div id="btn-carrito" class="btn-carrito">
+                            <p class="cantidad-carrito" id="cantidad-carrito">0</p>
+                        </div>
                     </div>
-                </div>
             </nav>
-			<div class="mobile-menu">
-				<nav class="navbar navbar-expand-md bg-light navbar-light">
-					<!-- Brand -->
-					<a class="navbar-brand" href="#">BIKESHOP</a>
+            
+            <section class="input-search-section">
+                    <div id="input-search-container" class="input-search-container">                        
+                        <input type="text" id="input-search" class="form-control input-search" placeholder="Buscar..."
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <a href="#titulo-cat-container" id="btn-search-act" class="btn-search-act"></a>
+                        <a class="btn-filter"></a>
+                        <div id="btn-close2" class="btnclose">
+                            <a class="border-top-close"></a>
+                            <a class="border-bottom-close"></a>
+                        </div>
+                   </div>       
+            </section>
 
-					<!-- Toggler/collapsibe Button -->
-					<button class="navbar-toggler" type="button" data-toggle="collapse"
-						data-target="#collapsibleNavbar">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-
-					<!-- Navbar links -->
-					<div class="collapse navbar-collapse" id="collapsibleNavbar">
-						<ul class="navbar-nav">
-							<li class="nav-item">
-								<a class="nav-link" href="../index.html">INICIO</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="productos.html">PRODUCTOS</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="contacto.html">CONTACTO</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">GALERIA</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="nosotros.html">NOSOTROS</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
+        </header>
+<!-- *******************************************MENU MOVIL************************************************* -->
+        <nav id="mobile-menu"class="mobile-menu">
+			<div class="a-btn-container-mobile">
+				<a class="a-btn-mobile"href="../index.html">INICIO</a>
+				<a class="a-btn-mobile" href="productos.html">PRODUCTOS</a>
+				<a class="a-btn-mobile" href="contacto.html">CONTACTO</a>
+				<a class="menuselect-mobile a-btn-mobile" href="#">>GALERÍA</a>
+				<a class="a-btn-mobile" href="nosotros.html">NOSOTROS</a>
 			</div>
-		</header>
+
+		</nav>
 		<section class="carrito-section">
             <div id="carrito-container" class="carrito-container">
                 <div class="titulo-btnclose-carrito-container">
