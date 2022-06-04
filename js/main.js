@@ -20,7 +20,7 @@ function menuListMobileBtns () {
   const menuList = document.getElementsByClassName("a-btn-mobile")
   for(let el of menuList) {
     el.addEventListener("click", ()=>{
-      console.log("hola")
+      console.log("gola")
     })
   }
 }

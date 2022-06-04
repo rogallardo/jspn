@@ -90,11 +90,11 @@
                 z-index: 1000;
                 }
             }                          
-            .search-carrito-btn-container{
+            .menu-search-carrito-btn-container{
                 width: 100vw;
                 height: 50px;
                 padding-left: 2%;
-                padding-right: 2%;
+                padding-right: 1%;
                 display: flex;
                 position: absolute;
                 align-items: center;
@@ -104,47 +104,60 @@
                 .menu-mobile-btn{
                     display: none;
                 }
-                .btn-search{
-                    height: 20px;
-                    width: 20px;
+                .search-carrito-btn-container{
+                    justify-content: space-between;
                     display: flex;
-                    background-image: url(../img/loupe.png);
-                    background-size: cover;	
-                    transition: 0.5s;
-                  
-                    z-index:1800;
-                    opacity: 30%;
-                    &:hover {
-                        transform: scale(1.2);
-                        cursor:pointer;	
-                    }
-                }	
-                .btn-carrito{
-                    min-width: 35px;
-                    height: 35px;
-                    display: flex;
-                    justify-content: center;
-                    background-image: url(../img/carrito.png);
-                    background-size: cover;	
-                    transition: 0.5s;
-                    margin-top:0.2%;
-                    
-                    z-index: 1700;	
-                    &:hover {
-                            transform: scale(1.2);
-                            cursor:pointer;			
-                    }		
+                    width: 100vw;
+                    height: fit-content;
+                    align-items: center;
+                    margin-right: 1%;
+    
+    
+                    .btn-search{
+                        height: 20px;
+                        width: 20px;
+                        display: flex;
+                        background-image: url(../img/loupe.png);
+                        background-size: cover;	
+                        transition: 0.2s;                
+                        z-index:1800;
+                        opacity: 75%;
+                        position: relative;   
+                        &:hover {
+                            transform: scale(1.1);
+                            cursor:pointer;	
+                        }
+                    }	
+                    .btn-carrito{
+                        width: 35px;
+                        height: 35px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-image: url(../img/carrito.png);
+                        background-size: cover;	
+                        transition: 0.2s;
+                        position: relative;
+                        opacity: 75%;
+                        // justify-self:center;
+                      
+                        
+                        z-index: 1700;	
+                        &:hover {
+                                transform: scale(1.1);
+                                cursor:pointer;			
+                        }		
                         .cantidad-carrito{
                             display: flex;
                             border-radius: 100%;
-                            background-color: rgba(253, 0, 0, 0.733);
-                            color: rgb(255, 255, 255);
-                            width: 18px;
-                            height: 18px;
-                            padding-top: 1%;
+                            background-color: rgba(253, 0, 0, 0);
+                            color: rgb(255, 255, 255);                        
+                            height: 15px;
+                            font-size: 10px;                     
                             transition: 0.2s;
                             justify-content: center;
                             align-items: center;
+                            margin-right: 35px;                    
                             -webkit-touch-callout: none;
                             -webkit-user-select: none;
                             -khtml-user-select: none;
@@ -155,11 +168,13 @@
                         .cantidad-carrito-effect{
                             display: flex;
                             border-radius: 100%;
-                            background-color: rgba(0, 194, 253, 0.733);
+                            background-color: rgb(0, 194, 253);
                             color: rgb(255, 255, 255);
-                            width: 18px;
-                            height: 18px;
+                            width: 15px;
+                            height: 15px;
                             transition: 1s;
+                            font-size: 10px;                           
+                            margin-right: 7px;
                             animation-name: effect;
                             animation-duration: 1s;
                             justify-content: center;
@@ -170,20 +185,23 @@
                             -moz-user-select: none;
                             -ms-user-select: none;
                             user-select: none;
-                            @keyframes effect {
-                                0%{
-                                    transform: translateY(0px);
+                                @keyframes effect {
+                                    0%{
+                                        transform: translateY(0px);
+                                    }
+                                    50%{
+                                        transform: translateY(-8px);
+                                    }
+                                    100%{
+                                        transform: translateY(0px);
+                                    }
                                 }
-                                50%{
-                                    transform: translateY(-8px);
-                                }
-                                100%{
-                                    transform: translateY(0px);
-                                }
+                
                             }
-            
-                        }
-                }	
+                    }
+    
+                }
+        
             }             
 }
 /////////////////////////////////////////////////INPUT SEARCH SECTION/////////////////////////////////////////
@@ -328,6 +346,7 @@
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        
         // padding:12px;
       
              
@@ -382,6 +401,7 @@
             flex-direction: column;
             align-items: center;
             overflow-y: scroll;
+            padding: 3%;
             
             .item-prod-carrito {
                 height: 160px;
@@ -697,15 +717,14 @@
             z-index: 1000;
                 }
         }                          
-        .search-carrito-btn-container{
+        .menu-search-carrito-btn-container{
             width: 100vw;
             height: 50px;
-            // padding-left:2% ;
-            // padding-right: 2%;
+            padding-left:2% ;
+            padding-right: 1%;
             display: flex;
-            // position: absolute;
             align-items: center;
-            // justify-content: space-between;
+            justify-content: space-between;
             background-color: #ffffff00;
             z-index: 900;
             .menu-mobile-btn-on{
@@ -804,50 +823,60 @@
                         transform: translateX(-10vw);
                     }
             }
-            .btn-search{
-                height: 20px;
-                width: 20px;
+            .search-carrito-btn-container{
+                justify-content: space-around;
                 display: flex;
-                background-image: url(../img/loupe.png);
-                background-size: cover;	
-                transition: 0.5s;                
-                z-index:1800;
-                opacity: 30%;
-                position: absolute;
-                margin-left: 82%;
-                
-                &:hover {
-                    transform: scale(1.2);
-                    cursor:pointer;	
-                }
-            }	
-            .btn-carrito{
-                min-width: 35px;
-                height: 35px;
-                display: flex;
-                justify-content: center;
-                background-image: url(../img/carrito.png);
-                background-size: cover;	
-                transition: 0.5s;
-                // margin-top:0.2%;
-                
-                z-index: 1700;	
-                &:hover {
-                        transform: scale(1.2);
-                        cursor:pointer;			
-                }		
+                width: 70px;
+                height: fit-content;
+                align-items: center;
+                margin-right: 1%;
+
+
+                .btn-search{
+                    height: 20px;
+                    width: 20px;
+                    display: flex;
+                    background-image: url(../img/loupe.png);
+                    background-size: cover;	
+                    transition: 0.2s;                
+                    z-index:1800;
+                    opacity: 75%;
+                    position: relative;   
+                    &:hover {
+                        transform: scale(1.1);
+                        cursor:pointer;	
+                    }
+                }	
+                .btn-carrito{
+                    width: 35px;
+                    height: 35px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-image: url(../img/carrito.png);
+                    background-size: cover;	
+                    transition: 0.2s;
+                    position: relative;
+                    // justify-self:center;
+                  
+                    
+                    z-index: 1700;	
+                    &:hover {
+                            transform: scale(1.1);
+                            cursor:pointer;			
+                    }		
                     .cantidad-carrito{
-                        position:absolute;
                         display: flex;
                         border-radius: 100%;
-                        background-color: rgba(253, 0, 0, 0.733);
-                        color: rgb(255, 255, 255);
-                        width: 18px;
-                        height: 18px;
-                        font-size: 12px;                        
+                        background-color: rgba(253, 0, 0, 0);
+                        color: rgb(255, 255, 255);                        
+                        height: 15px;
+                        font-size: 10px;                     
                         transition: 0.2s;
+                        letter-spacing: 0px; 
                         justify-content: center;
                         align-items: center;
+                        margin-right: 35px;                    
                         -webkit-touch-callout: none;
                         -webkit-user-select: none;
                         -khtml-user-select: none;
@@ -858,40 +887,101 @@
                     .cantidad-carrito-effect{
                         display: flex;
                         border-radius: 100%;
-                        background-color: rgba(0, 194, 253, 0.733);
+                        background-color: rgb(0, 194, 253);
                         color: rgb(255, 255, 255);
-                        width: 18px;
-                        height: 18px;
+                        width: 15x;
+                        height: 15px;
                         transition: 1s;
+                        font-size: 10px; 
+                        margin-right: 7px;
+                        letter-spacing: 0px;           
                         animation-name: effect;
                         animation-duration: 1s;
                         justify-content: center;
-                        align-items: center;
                         -webkit-touch-callout: none;
                         -webkit-user-select: none;
                         -khtml-user-select: none;
                         -moz-user-select: none;
                         -ms-user-select: none;
                         user-select: none;
-                        @keyframes effect {
-                            0%{
-                                transform: translateY(0px);
+                            @keyframes effect {
+                                0%{
+                                    transform: translateY(0px);
+                                }
+                                50%{
+                                    transform: translateY(-8px);
+                                }
+                                100%{
+                                    transform: translateY(0px);
+                                }
                             }
-                            50%{
-                                transform: translateY(-8px);
-                            }
-                            100%{
-                                transform: translateY(0px);
-                            }
+            
                         }
-        
-                    }
-            }	
+                }
+
+            }
+	
         }             
     }
 //////////////////////////////////////////////MOBILE MENU SECTION////////////////////////////////////////////    
     .mobile-menu{
-        display: none;
+        display:flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        height: 100vh;
+        width: 100vw;
+        margin-top: 50px;
+       
+        position: fixed;
+        justify-content: space-between;
+        z-index: 0;
+        padding-left: 7%;
+        padding-top: 10%;
+        padding-bottom: 80%;
+        transition: 0.3s;
+        opacity: 0%;
+      
+        transform: translateX(-5vw);
+    
+        .a-btn-container-mobile{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            width: 100vw;
+            height: 100vh;          
+            margin-bottom: 0%;
+            background-color: #ffffff;
+            flex-direction: column;
+            z-index:0 ;
+            
+                .a-btn-mobile{
+                color: rgb(0, 0, 0);
+                display: inline-block;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: 400;
+                width: 100vw;
+                align-items: center;
+                justify-content: center;
+                transition: 0.5s ease-in-out;
+                font-size: 12px;
+                letter-spacing: 4px;
+                z-index: 1000;
+                height: 50px;
+                border-bottom: solid 1px rgb(179, 176, 176);
+            
+                &:hover {
+                    color: rgb(108, 175, 153);   
+                }
+                }
+                .menuselect-mobile {
+                    color: rgb(108, 175, 153);
+                    z-index: 1000;
+                }
+        }
+
+        
+    
     }
     .mobile-menu-on{
         display:flex;
@@ -906,6 +996,10 @@
         padding-left: 7%;
         padding-top: 10%;
         padding-bottom: 80%;
+        transform: translateX(0vw);
+        transition: 0.3s;
+        opacity: 100%;
+    
         .a-btn-container-mobile{
             display: flex;
             justify-content: space-between;
@@ -1056,7 +1150,7 @@
     }	
 /////////////////////////////////////////////////CARRITO SECTION///////////////////////////////////////////////      
     .carrito-section{   
-        display: flex; 
+    
         width: 100vw;
         z-index: 1200;
         position: absolute; 
@@ -1087,6 +1181,7 @@
             display: flex;
             flex-direction: column;
             overflow: hidden;
+            
             // padding:12px;
           
                  
@@ -1141,6 +1236,7 @@
                 flex-direction: column;
                 align-items: center;
                 overflow-y: scroll;
+                padding: 3%;
                 
                 .item-prod-carrito {
                     height: 160px;
@@ -1435,7 +1531,7 @@
                 align-items: center;
                 justify-content: center;
                 transition: 0.5s ease-in-out;
-                font-size: 12px;
+                font-size: 11px;
                 letter-spacing: 4px;
                 z-index: 1000;
                 
@@ -1450,11 +1546,11 @@
                 z-index: 1000;
                 }
             }                          
-            .search-carrito-btn-container{
+            .menu-search-carrito-btn-container{
                 width: 100vw;
                 height: 50px;
                 padding-left: 2%;
-                padding-right: 2%;
+                padding-right: 1%;
                 display: flex;
                 position: absolute;
                 align-items: center;
@@ -1464,87 +1560,104 @@
                 .menu-mobile-btn{
                     display: none;
                 }
-                .btn-search{
-                    height: 20px;
-                    width: 20px;
+                .search-carrito-btn-container{
+                    justify-content: space-between;
                     display: flex;
-                    background-image: url(../img/loupe.png);
-                    background-size: cover;	
-                    transition: 0.5s;
-                  
-                    z-index:1800;
-                    opacity: 30%;
-                    &:hover {
-                        transform: scale(1.2);
-                        cursor:pointer;	
+                    width: 100vw;
+                    height: fit-content;
+                    align-items: center;
+                    margin-right: 1%;
+    
+    
+                    .btn-search{
+                        height: 20px;
+                        width: 20px;
+                        display: flex;
+                        background-image: url(../img/loupe.png);
+                        background-size: cover;	
+                        transition: 0.2s;                
+                        z-index:1800;
+                        opacity: 75%;
+                        position: relative;   
+                        &:hover {
+                            transform: scale(1.1);
+                            cursor:pointer;	
+                        }
+                    }	
+                    .btn-carrito{
+                        width: 35px;
+                        height: 35px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-image: url(../img/carrito.png);
+                        background-size: cover;	
+                        transition: 0.2s;
+                        position: relative;
+                        // justify-self:center;
+                      
+                        
+                        z-index: 1700;	
+                        &:hover {
+                                transform: scale(1.1);
+                                cursor:pointer;			
+                        }		
+                   .cantidad-carrito{
+                        display: flex;
+                        border-radius: 100%;
+                        background-color: rgba(253, 0, 0, 0);
+                        color: rgb(255, 255, 255);                        
+                        height: 15px;
+                        font-size: 10px;                     
+                        transition: 0.2s;
+                        letter-spacing: 0px; 
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 35px;                    
+                        -webkit-touch-callout: none;
+                        -webkit-user-select: none;
+                        -khtml-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
                     }
-                }	
-                .btn-carrito{
-                    min-width: 35px;
-                    height: 35px;
-                    display: flex;
-                    justify-content: center;
-                    background-image: url(../img/carrito.png);
-                    background-size: cover;	
-                    transition: 0.5s;
-                    margin-top:0.2%;
-                    
-                    z-index: 1700;	
-                    &:hover {
-                            transform: scale(1.2);
-                            cursor:pointer;			
-                    }		
-                        .cantidad-carrito{
-                            display: flex;
-                            border-radius: 100%;
-                            background-color: rgba(253, 0, 0, 0.733);
-                            color: rgb(255, 255, 255);
-                            width: 18px;
-                            height: 18px;
-                            padding-top: 1%;
-                            transition: 0.2s;
-                            justify-content: center;
-                            align-items: center;
-                            -webkit-touch-callout: none;
-                            -webkit-user-select: none;
-                            -khtml-user-select: none;
-                            -moz-user-select: none;
-                            -ms-user-select: none;
-                            user-select: none;
-                        }
-                        .cantidad-carrito-effect{
-                            display: flex;
-                            border-radius: 100%;
-                            background-color: rgba(0, 194, 253, 0.733);
-                            color: rgb(255, 255, 255);
-                            width: 18px;
-                            height: 18px;
-                            transition: 1s;
-                            animation-name: effect;
-                            animation-duration: 1s;
-                            justify-content: center;
-                            align-items: center;
-                            -webkit-touch-callout: none;
-                            -webkit-user-select: none;
-                            -khtml-user-select: none;
-                            -moz-user-select: none;
-                            -ms-user-select: none;
-                            user-select: none;
-                            @keyframes effect {
-                                0%{
-                                    transform: translateY(0px);
+                    .cantidad-carrito-effect{
+                        display: flex;
+                        border-radius: 100%;
+                        background-color: rgb(0, 194, 253);
+                        color: rgb(255, 255, 255);
+                        width: 15x;
+                        height: 15px;
+                        transition: 1s;
+                        font-size: 10px; 
+                        margin-right: 7px;
+                        letter-spacing: 0px;           
+                        animation-name: effect;
+                        animation-duration: 1s;
+                        justify-content: center;
+                        -webkit-touch-callout: none;
+                        -webkit-user-select: none;
+                        -khtml-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                                @keyframes effect {
+                                    0%{
+                                        transform: translateY(0px);
+                                    }
+                                    50%{
+                                        transform: translateY(-8px);
+                                    }
+                                    100%{
+                                        transform: translateY(0px);
+                                    }
                                 }
-                                50%{
-                                    transform: translateY(-8px);
-                                }
-                                100%{
-                                    transform: translateY(0px);
-                                }
+                
                             }
-            
-                        }
-                }	
-            }             
+                    }
+    
+                }
+            }
         }
 /////////////////////////////////////////////////INPUT SEARCH SECTION/////////////////////////////////////////
 .input-search-section{
@@ -1664,7 +1777,7 @@
     justify-content: right;
   
     .carrito-container{
-        width: 33%;
+        width: 37%;
         height: 100%;
         position: fixed;      
         background-color: rgb(226, 226, 226);
@@ -1678,7 +1791,7 @@
         
     }
     .carrito-container-on{
-        width: 33%;
+        width: 37%;
         height: 100%;
         position: fixed;
         background-color: rgb(226, 226, 226);
@@ -1742,6 +1855,7 @@
             flex-direction: column;
             align-items: center;
             overflow-y: scroll;
+            padding: 3%;
             
             .item-prod-carrito {
                 height: 160px;

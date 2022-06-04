@@ -248,7 +248,7 @@
 @media only screen and (min-width: 200px) and (max-width: 760px) {
     .grid-container-productos {
         background-color: rgb(236, 236, 236);
-        min-height: 100vh;
+        height: 100vh;
         width: 100vw;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -259,16 +259,21 @@
             'footer	 		footer 		footer';
        .categorias-productos-container {
             margin-top: 0px;
+            padding-top: 0%;
             width: 100vw;
             grid-area: categorias-productos-container;
+            z-index: 0;
+            gap:5px;
             .categorias-container {
-               height: 100vh;
+               height:90vh;
                 width: 100vw;
                 display: grid;
                 justify-content: center;
                 align-items: center;
-                gap: 5vw;
-                padding: 5%;
+                padding-left: 2%;
+                padding-right: 2%;
+                margin-top: 30px;
+                gap:5px;
                 
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(2, auto);
@@ -276,7 +281,7 @@
                 'cat-MTB cat-repuestos'
                 'cat-accesorios cat-indumentaria';
                 .item-cat {
-                    height: 43vh;
+                    height: 45vh;
                     width: 45vw;
                     box-shadow: 5px 0px 10px rgb(155, 155, 155);
                     justify-content: center;
@@ -325,7 +330,7 @@
             }
             .titulo-cat-container {
                 width: 100vw;
-                height: 200px;
+                height: 150px;
                 display: flex;
                 justify-content: center;
                 align-items:flex-end;

@@ -22,6 +22,8 @@
         display: grid;
         grid-area: form-container;
         color:blanchedalmond;
+        z-index: 0;
+    
     }
     .form-input{
         display: flex;
@@ -43,7 +45,7 @@
         justify-content: center;
     }
     .selector-sexo{
-        z-index: 2;
+        z-index: 0;
     }
 
     .titulo-termycond {
