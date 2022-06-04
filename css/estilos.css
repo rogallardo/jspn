@@ -1225,8 +1225,8 @@ a {
     cursor: pointer;
   }
   .menu .menu-search-carrito-btn-container .search-carrito-btn-container .btn-carrito {
-    width: 35px;
-    height: 35px;
+    width: 33px;
+    height: 33px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1902,8 +1902,8 @@ a {
     margin-right: 1%;
   }
   .menu .menu-search-carrito-btn-container .search-carrito-btn-container .btn-search {
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
     display: flex;
     background-image: url(../img/loupe.png);
     background-size: cover;
@@ -1917,8 +1917,8 @@ a {
     cursor: pointer;
   }
   .menu .menu-search-carrito-btn-container .search-carrito-btn-container .btn-carrito {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3190,6 +3190,7 @@ a {
 @media only screen and (min-width: 200px) and (max-width: 760px) {
   .grid-container-productos {
     background-color: #ececec;
+    gap: 5px;
     height: 100vh;
     width: 100vw;
     display: grid;
@@ -3206,20 +3207,21 @@ a {
     gap: 5px;
   }
   .grid-container-productos .categorias-productos-container .categorias-container {
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     display: grid;
     justify-content: center;
     align-items: center;
     padding-left: 2%;
     padding-right: 2%;
-    margin-top: 30px;
+    margin-top: 20px;
     gap: 5px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
     grid-template-areas: "cat-MTB cat-repuestos" "cat-accesorios cat-indumentaria";
   }
   .grid-container-productos .categorias-productos-container .categorias-container .item-cat {
+    gap: 5px;
     height: 45vh;
     width: 45vw;
     box-shadow: 5px 0px 10px #9b9b9b;
@@ -3268,7 +3270,7 @@ a {
   }
   .grid-container-productos .categorias-productos-container .titulo-cat-container {
     width: 100vw;
-    height: 150px;
+    height: 110px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
